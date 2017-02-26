@@ -15,7 +15,7 @@ namespace Managers
         }
 
         private Products productsList;
-        private NetConnection LoadTextConnection;
+        private NetConnection LoadProductsConnection;
 
 
         public void ProductsLoad(string tagsString)
@@ -30,17 +30,17 @@ namespace Managers
 
         public void ProductsLoad(params string[] tags)
         {
-            if (LoadTextConnection != null)
+            if (LoadProductsConnection != null)
             {
-                LoadTextConnection.Cancel();
-                LoadTextConnection = null;
+                LoadProductsConnection.Cancel();
+                LoadProductsConnection = null;
             }
-            LoadTextConnection = NetManager.LoadText(NetManager.MainUrl + "get-products.php", new URLVariables(tags), decodeJSON);
+            LoadProductsConnection = NetManager.LoadText(NetManager.MainUrl + "get-products.php", new URLVariables(tags), DecodeJsonProducts);
         }
 
-        private void decodeJSON(string jsonData)
+        private void DecodeJsonProducts(string jsonData)
         {
-            LoadTextConnection = null;
+            LoadProductsConnection = null;
             if (!String.IsNullOrEmpty(jsonData))
             {
                 productsList = JsonUtility.FromJson<Products>(jsonData);
@@ -48,6 +48,38 @@ namespace Managers
                 {
                     ItemsLayer.instance.ScrollPanel.Items = productsList.products;
                     ItemsLayer.instance.ScrollPanel.LoadItems(1); //загружаем первую страницу
+                }
+            }
+        }
+
+
+
+        private Product product;
+        private NetConnection LoadProductConnection;
+
+        public void ProductLoad(int id)
+        {
+            if (LoadProductConnection != null)
+            {
+                LoadProductConnection.Cancel();
+                LoadProductConnection = null;
+            }
+            URLVariables variables = new URLVariables();
+            variables.Names = new[] {"id"};
+            variables.Params = new[] {id.ToString()};
+            LoadProductConnection = NetManager.LoadText(NetManager.MainUrl + "get-product-by-id.php", variables, DecodeJsonProduct);
+        }
+
+        private void DecodeJsonProduct(string jsonData)
+        {
+            LoadProductConnection = null;
+            if (!String.IsNullOrEmpty(jsonData))
+            {
+                product = JsonUtility.FromJson<Product>(jsonData);
+                if (product.product_id >= 0)
+                {
+//                    ItemsLayer.instance.ScrollPanel.Items = productsList.products;
+//                    ItemsLayer.instance.ScrollPanel.LoadItems(1); //загружаем первую страницу
                 }
             }
         }

@@ -2,35 +2,32 @@
 {
     public class URLVariables
     {
-        string[] Params;
-        //string[] Names;
+        public string[] Params;
+        public string[] Names;
 
         public URLVariables(params string[] _params)
         {
             Params = _params;
         }
 
-        public string getString
+        public string GetString
         {
             get
             {
                 string output = "?";
                     if(Params != null && Params.Length > 0)
                     {
-//                        if (Names == null)
-//                        {
-                            for (int i = 0; i < Params.Length; i++)
+                        for (int i = 0; i < Params.Length; i++)
+                        {
+                            if (Names == null || Names.Length <= i)
                             {
                                 output += "param" + i + "=" + Params[i] + "&";
                             }
-//                        }
-//                        else
-//                        {
-//                            for (int i = 0; i < Params.Length; i++)
-//                            {
-//                                output += Names[i] + "=" + Params[i] + "&";
-//                            }
-//                        }
+                            else
+                            {
+                                output += Names[i] + "=" + Params[i] + "&";
+                            }
+                        }
                     }
 
                 return output;
