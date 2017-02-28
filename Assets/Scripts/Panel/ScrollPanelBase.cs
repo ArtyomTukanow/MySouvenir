@@ -19,6 +19,7 @@ namespace Panels
         //GAME OBJECTS
         public Button NextArrow;
         public Button PrevArrow;
+        public GameObject BottomPanel;
 
         public void LoadNextPage()
         {
@@ -65,9 +66,14 @@ namespace Panels
                 Vector2 sizeContainer = Items[i].ContainerGameObject.GetComponent<RectTransform>().sizeDelta;
                 ItemsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, sizeContainer.y);
                 Items[i].ContainerGameObject.GetComponent<RectTransform>().anchoredPosition =
-                    new Vector2(0, -sizeContainer.x / 2 - (i - startProductId) * sizeContainer.y);
+                    new Vector2(0, -sizeContainer.y / 2 - (i - startProductId) * sizeContainer.y);
             }
-            ItemsLayer.instance.MoveBottomPanelToBottom(); //FIXME!!!!!!!
+            if (BottomPanel != null)
+            {
+                ItemsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, BottomPanel.GetComponent<RectTransform>().sizeDelta.y);
+                BottomPanel.transform.parent = ItemsContainer.transform;
+                BottomPanel.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+            }
         }
 
         public override void ReloadPanel()

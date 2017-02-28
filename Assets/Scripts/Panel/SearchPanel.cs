@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace Panels
 {
-    public class SearchPanel : IPanel
+    public class SearchPanel
     {
         //LOGIC
         public Action OnSearch;

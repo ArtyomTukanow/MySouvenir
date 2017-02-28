@@ -30,21 +30,19 @@ namespace Assets.Scripts.Layers
             SearchPanel = new SearchPanel();
             SearchPanel.SearchInputField = GameObject.Find("searchItemsInput").GetComponent<InputField>();
             SearchPanel.SearchItemsButton = GameObject.Find("searchItemsButton").GetComponent<Button>();
+            SearchPanel.OnSearch = delegate { ApplicationManager.productManager.ProductsLoad(SearchPanel.SearchInputField.text); };
 
             ScrollPanel = new ScrollPanelBase<Product>();
             ScrollPanel.InitPanel(GameObject.Find("itemsContent"));
             ScrollPanel.NextArrow = GameObject.Find("nextItemsPageButton").GetComponent<Button>();
             ScrollPanel.PrevArrow = GameObject.Find("prevItemsPageButton").GetComponent<Button>();
-            SearchPanel.OnSearch = delegate { ApplicationManager.productManager.ProductsLoad(SearchPanel.SearchInputField.text); };
+            ScrollPanel.BottomPanel = GameObject.Find("bottomItemsBar");
 
             ScrollPanel.ReloadPanel();
             SearchPanel.InitPanel();
         }
 
         public static ItemsLayer instance = new ItemsLayer();
-
-
-        private GameObject bottomItemsBar = GameObject.Find("bottomItemsBar");
 
 
 
@@ -56,13 +54,6 @@ namespace Assets.Scripts.Layers
         public void OnDisable()
         {
 
-        }
-
-        public void MoveBottomPanelToBottom()
-        {
-            ScrollPanel.ItemsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, bottomItemsBar.GetComponent<RectTransform>().sizeDelta.y);
-            bottomItemsBar.transform.parent = ScrollPanel.ItemsContainer.transform;
-            bottomItemsBar.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
         }
     }
 }
