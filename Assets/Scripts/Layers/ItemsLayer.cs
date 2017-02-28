@@ -32,12 +32,12 @@ namespace Assets.Scripts.Layers
             SearchPanel.SearchItemsButton = GameObject.Find("searchItemsButton").GetComponent<Button>();
 
             ScrollPanel = new ScrollPanelBase<Product>();
-            ScrollPanel.ItemsContainer = GameObject.Find("itemsContent");
+            ScrollPanel.InitPanel(GameObject.Find("itemsContent"));
             ScrollPanel.NextArrow = GameObject.Find("nextItemsPageButton").GetComponent<Button>();
             ScrollPanel.PrevArrow = GameObject.Find("prevItemsPageButton").GetComponent<Button>();
             SearchPanel.OnSearch = delegate { ApplicationManager.productManager.ProductsLoad(SearchPanel.SearchInputField.text); };
 
-            ScrollPanel.InitPanel();
+            ScrollPanel.ReloadPanel();
             SearchPanel.InitPanel();
         }
 

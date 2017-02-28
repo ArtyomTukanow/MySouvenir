@@ -3,7 +3,6 @@ using Assets.Scripts.Layers;
 using Items.Interface;
 using UnityEngine;
 using UnityEngine.UI;
-using Utils;
 
 namespace Panels
 {
@@ -11,28 +10,13 @@ namespace Panels
     /// Скролл панель из объектов типа T
     /// </summary>
     /// <typeparam name="T">Тип отоброжаемых объектов. Обязательно наследуемый от IItemBase</typeparam>
-    public class ScrollPanelBase <T> : IPanel where T : IItemBase
+    public class ScrollPanelBase <T> : PanelBase<T> where T : IItemBase
     {
-        //LOGIC
-        public bool IsVerticalPanel = false;
-
         public int Page = 1;
         public int ItemsPerPage = 10;
 
-        private T[] _items;
-        public T[] Items
-        {
-            set
-            {
-                destroyOldItems();
-                _items = value;
-            }
-            get { return _items; }
-        }
-
 
         //GAME OBJECTS
-        public GameObject ItemsContainer;
         public Button NextArrow;
         public Button PrevArrow;
 
@@ -58,7 +42,7 @@ namespace Panels
             LoadItems();
         }
 
-        public void LoadItems()
+        public override void LoadItems()
         {
             if(Items == null || Items.Length == 0)
                 throw new Exception("Items are null or empty");
@@ -81,21 +65,12 @@ namespace Panels
                 Vector2 sizeContainer = Items[i].ContainerGameObject.GetComponent<RectTransform>().sizeDelta;
                 ItemsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, sizeContainer.y);
                 Items[i].ContainerGameObject.GetComponent<RectTransform>().anchoredPosition =
-                    new Vector2(0, -140 - (i - startProductId) * sizeContainer.y);
+                    new Vector2(0, -sizeContainer.x / 2 - (i - startProductId) * sizeContainer.y);
             }
-            ItemsLayer.instance.MoveBottomPanelToBottom();
+            ItemsLayer.instance.MoveBottomPanelToBottom(); //FIXME!!!!!!!
         }
 
-        private void destroyOldItems()
-        {
-            if(Items == null || Items.Length == 0)
-                return;
-
-            foreach (T item in Items)
-                item.Remove();
-        }
-
-        public void InitPanel()
+        public override void ReloadPanel()
         {
             if(NextArrow != null)
                 NextArrow.onClick.AddListener(delegate

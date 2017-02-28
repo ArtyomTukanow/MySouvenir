@@ -66,7 +66,8 @@
     <Compile Include="Assets\Scripts\Net\NetConnection.cs" />
     <Compile Include="Assets\Scripts\Net\NetManager.cs" />
     <Compile Include="Assets\Scripts\Net\URLVariables.cs" />
-    <Compile Include="Assets\Scripts\Panel\IPanel.cs" />
+    <Compile Include="Assets\Scripts\Panel\Interface\IPanel.cs" />
+    <Compile Include="Assets\Scripts\Panel\PanelBase.cs" />
     <Compile Include="Assets\Scripts\Panel\ScrollPanelBase.cs" />
     <Compile Include="Assets\Scripts\Panel\SearchPanel.cs" />
     <Compile Include="Assets\Scripts\Utils\Log.cs" />
