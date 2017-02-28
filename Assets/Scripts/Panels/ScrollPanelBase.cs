@@ -1,5 +1,4 @@
 ﻿using System;
-using Assets.Scripts.Layers;
 using Items.Interface;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,6 +19,12 @@ namespace Panels
         public Button NextArrow;
         public Button PrevArrow;
         public GameObject BottomPanel;
+
+        public ScrollPanelBase(GameObject panel, GameObject parent = null)
+            : base (panel, panel)
+        {
+
+        }
 
         public void LoadNextPage()
         {
@@ -48,7 +53,7 @@ namespace Panels
             if(Items == null || Items.Length == 0)
                 throw new Exception("Items are null or empty");
 
-            destroyOldItems();
+            DestroyOldItems();
             if (Page < 1) Page = 1;
 
             int pagesCount = Items.Length % ItemsPerPage > 0

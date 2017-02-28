@@ -1,10 +1,9 @@
 ﻿using Items.Interface;
 using UnityEngine;
-using Utils;
 
 namespace Panels
 {
-    public class PanelBase <T> : IPanel<T>  where T : IItemBase
+    public class PanelBase <T> : IPanelItems<T>  where T : IItemBase
     {
         public GameObject ItemsContainer { set; get; }
 
@@ -13,13 +12,13 @@ namespace Panels
         {
             set
             {
-                destroyOldItems();
+                DestroyOldItems();
                 _items = value;
             }
             get { return _items; }
         }
 
-        protected void destroyOldItems()
+        protected void DestroyOldItems()
         {
             if(Items == null || Items.Length == 0)
                 return;
@@ -28,7 +27,7 @@ namespace Panels
                 item.Remove();
         }
 
-        public virtual void InitPanel(GameObject panel, GameObject parent = null)
+        public PanelBase(GameObject panel, GameObject parent = null)
         {
             ItemsContainer = panel;
             if(parent != null)

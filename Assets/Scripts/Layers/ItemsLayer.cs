@@ -27,19 +27,16 @@ namespace Assets.Scripts.Layers
 
         private ItemsLayer()
         {
-            SearchPanel = new SearchPanel();
-            SearchPanel.SearchInputField = GameObject.Find("searchItemsInput").GetComponent<InputField>();
-            SearchPanel.SearchItemsButton = GameObject.Find("searchItemsButton").GetComponent<Button>();
+            SearchPanel = new SearchPanel(GameObject.Find("itemsSearchBar"));
             SearchPanel.OnSearch = delegate { ApplicationManager.productManager.ProductsLoad(SearchPanel.SearchInputField.text); };
 
-            ScrollPanel = new ScrollPanelBase<Product>();
-            ScrollPanel.InitPanel(GameObject.Find("itemsContent"));
+            ScrollPanel = new ScrollPanelBase<Product>(GameObject.Find("itemsContent"));
             ScrollPanel.NextArrow = GameObject.Find("nextItemsPageButton").GetComponent<Button>();
             ScrollPanel.PrevArrow = GameObject.Find("prevItemsPageButton").GetComponent<Button>();
             ScrollPanel.BottomPanel = GameObject.Find("bottomItemsBar");
 
             ScrollPanel.ReloadPanel();
-            SearchPanel.InitPanel();
+            SearchPanel.ReloadPanel();
         }
 
         public static ItemsLayer instance = new ItemsLayer();
