@@ -15,7 +15,6 @@ namespace Managers
         }
 
         private Products productsList;
-        private NetConnection LoadProductsConnection;
 
 
         public void ProductsLoad(string tagsString)
@@ -30,17 +29,11 @@ namespace Managers
 
         public void ProductsLoad(params string[] tags)
         {
-            if (LoadProductsConnection != null)
-            {
-                LoadProductsConnection.Cancel();
-                LoadProductsConnection = null;
-            }
-            LoadProductsConnection = NetManager.LoadText(NetManager.MainUrl + "get-products.php", new URLVariables(tags), DecodeJsonProducts);
+            NetManager.LoadText(NetManager.MainUrl + "get-products.php", new URLVariables(tags), DecodeJsonProducts);
         }
 
         private void DecodeJsonProducts(string jsonData)
         {
-            LoadProductsConnection = null;
             if (!String.IsNullOrEmpty(jsonData))
             {
                 productsList = JsonUtility.FromJson<Products>(jsonData);
@@ -55,24 +48,17 @@ namespace Managers
 
 
         private Product product;
-        private NetConnection LoadProductConnection;
 
         public void ProductLoad(int id)
         {
-            if (LoadProductConnection != null)
-            {
-                LoadProductConnection.Cancel();
-                LoadProductConnection = null;
-            }
             URLVariables variables = new URLVariables();
             variables.Names = new[] {"id"};
             variables.Params = new[] {id.ToString()};
-            LoadProductConnection = NetManager.LoadText(NetManager.MainUrl + "get-product-by-id.php", variables, DecodeJsonProduct);
+            NetManager.LoadText(NetManager.MainUrl + "get-product-by-id.php", variables, DecodeJsonProduct);
         }
 
         private void DecodeJsonProduct(string jsonData)
         {
-            LoadProductConnection = null;
             if (!String.IsNullOrEmpty(jsonData))
             {
                 product = JsonUtility.FromJson<Product>(jsonData);

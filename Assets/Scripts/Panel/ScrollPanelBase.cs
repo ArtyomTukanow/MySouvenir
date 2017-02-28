@@ -18,7 +18,17 @@ namespace Panels
 
         public int Page = 1;
         public int ItemsPerPage = 10;
-        public T[] Items;
+
+        private T[] _items;
+        public T[] Items
+        {
+            set
+            {
+                destroyOldItems();
+                _items = value;
+            }
+            get { return _items; }
+        }
 
 
         //GAME OBJECTS
@@ -63,13 +73,10 @@ namespace Panels
 
             int startProductId = (Page - 1) * ItemsPerPage;
             int endProductId = Page == pagesCount ? Items.Length : Page * ItemsPerPage;
-            Log.d("Loading Items " + startProductId + " to " + endProductId);
             ItemsContainer.GetComponent<RectTransform>().sizeDelta = new Vector2(0, 0);
             for (int i = startProductId; i < endProductId; i++)
             {
-                Items[i]
-                    .Create(Loader.Instantiate(Resources.Load<GameObject>("productItem")),
-                        ItemsContainer.transform);
+                Items[i].Create(Loader.Instantiate(Resources.Load<GameObject>("productItem")), ItemsContainer.transform);
 
                 Vector2 sizeContainer = Items[i].ContainerGameObject.GetComponent<RectTransform>().sizeDelta;
                 ItemsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, sizeContainer.y);
@@ -82,14 +89,10 @@ namespace Panels
         private void destroyOldItems()
         {
             if(Items == null || Items.Length == 0)
-                throw new Exception("Items are null or empty");
+                return;
 
             foreach (T item in Items)
-                if (item.ContainerGameObject != null)
-                {
-                    item.ImageLoadConnection.Cancel();
-                    Loader.Destroy(item.ContainerGameObject);
-                }
+                item.Remove();
         }
 
         public void InitPanel()

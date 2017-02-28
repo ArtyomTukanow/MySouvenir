@@ -16,10 +16,15 @@ namespace Items.Interface
         GameObject ContainerGameObject { set; get; }
 
         /// <summary>
-        /// Создание объекта на поле
+        /// Создание объекта на поле.
         /// </summary>
         /// <param name="container">Базовый GameObject</param>
         /// <param name="parent">Родитель создаваемого GameObject'а</param>
         void Create(GameObject container, Transform parent);
+
+        /// <summary>
+        /// Очистка объекта.
+        /// </summary>
+        void Remove();
     }
 }
