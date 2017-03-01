@@ -12,8 +12,8 @@ namespace Assets.Scripts.Layers
         private GameObject _canvas = GameObject.Find("itemsCanvas");
         private LayerNamesEnum _name = LayerNamesEnum.items;
 
-        public ScrollPanelBase<Product> ScrollPanel;
-        public SearchPanel SearchPanel;
+        public ScrollPanelBase<Product> itemsScrollPanel;
+        public SearchPanel itemsSearchPanel;
 
         public LayerNamesEnum Name
         {
@@ -27,16 +27,17 @@ namespace Assets.Scripts.Layers
 
         private ItemsLayer()
         {
-            SearchPanel = new SearchPanel(GameObject.Find("itemsSearchBar"));
-            SearchPanel.OnSearch = delegate { ApplicationManager.productManager.ProductsLoad(SearchPanel.SearchInputField.text); };
+            itemsSearchPanel = new SearchPanel(GameObject.Find("itemsSearchPanel"));
+            itemsSearchPanel.OnSearch = delegate { ApplicationManager.productManager.ProductsLoad(itemsSearchPanel.SearchInputField.text); };
 
-            ScrollPanel = new ScrollPanelBase<Product>(GameObject.Find("itemsContent"));
-            ScrollPanel.NextArrow = GameObject.Find("nextItemsPageButton").GetComponent<Button>();
-            ScrollPanel.PrevArrow = GameObject.Find("prevItemsPageButton").GetComponent<Button>();
-            ScrollPanel.BottomPanel = GameObject.Find("bottomItemsBar");
+            itemsScrollPanel = new ScrollPanelBase<Product>("productsItems", GameObject.Find("itemsContent"));
+            itemsScrollPanel.DefaultText = GameObject.Find("defaultText").GetComponent<Text>();
+            itemsScrollPanel.NextArrow = GameObject.Find("nextItemsPageButton").GetComponent<Button>();
+            itemsScrollPanel.PrevArrow = GameObject.Find("prevItemsPageButton").GetComponent<Button>();
+            itemsScrollPanel.BottomPanel = GameObject.Find("bottomItemsBar");
 
-            ScrollPanel.ReloadPanel();
-            SearchPanel.ReloadPanel();
+            itemsScrollPanel.ReloadPanel();
+            itemsSearchPanel.ReloadPanel();
         }
 
         public static ItemsLayer instance = new ItemsLayer();

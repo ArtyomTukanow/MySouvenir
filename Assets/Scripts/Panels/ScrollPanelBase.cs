@@ -2,6 +2,7 @@
 using Items.Interface;
 using UnityEngine;
 using UnityEngine.UI;
+using Utils;
 
 namespace Panels
 {
@@ -11,67 +12,111 @@ namespace Panels
     /// <typeparam name="T">Тип отоброжаемых объектов. Обязательно наследуемый от IItemBase</typeparam>
     public class ScrollPanelBase <T> : PanelBase<T> where T : IItemBase
     {
-        public int Page = 1;
-        public int ItemsPerPage = 10;
+        private int _pagesCount;
+        private int _page = 1;
 
+        private int _itemsPerPage;
+        public int ItemsPerPage
+        {
+            set
+            {
+                if (Items != null)
+                {
+                    _pagesCount = Items.Length % value > 0
+                        ? Items.Length / value + 1
+                        : Items.Length / value;
+                }
+                else
+                {
+                    _pagesCount = 0;
+                }
+
+                _itemsPerPage = value;
+            }
+            get { return _itemsPerPage; }
+        }
+
+        public override T[] Items
+        {
+            get { return base.Items; }
+            set
+            {
+                _pagesCount = value.Length % _itemsPerPage > 0
+                    ? value.Length / _itemsPerPage + 1
+                    : value.Length / _itemsPerPage;
+                base.Items = value;
+            }
+        }
+
+        private string _itemsResourceName;
 
         //GAME OBJECTS
         public Button NextArrow;
         public Button PrevArrow;
         public GameObject BottomPanel;
+        private string _firstDefaultText;
+        private Text _defaultText;
+        public Text DefaultText
+        {
+            set
+            {
+                _firstDefaultText = value.text;
+                _defaultText = value;
+            }
+            get { return _defaultText; }
+        }
 
-        public ScrollPanelBase(GameObject panel, GameObject parent = null)
+        public ScrollPanelBase(string itemsResourceName, GameObject panel, GameObject parent = null)
             : base (panel, panel)
         {
-
+            _itemsResourceName = itemsResourceName;
+            ItemsPerPage = 10;
         }
 
         public void LoadNextPage()
         {
-            if(Items == null || Items.Length == 0)
-                throw new Exception("Items are null or empty");
-            Page++;
+            _page++;
             LoadItems();
         }
 
         public void LoadPrevPage()
         {
-            if(Items == null || Items.Length == 0)
-                throw new Exception("Items are null or empty");
-            Page--;
+            _page--;
             LoadItems();
         }
 
         public void LoadItems(int page)
         {
-            Page = page;
+            _page = page;
             LoadItems();
         }
 
         public override void LoadItems()
         {
-            if(Items == null || Items.Length == 0)
-                throw new Exception("Items are null or empty");
-
             DestroyOldItems();
-            if (Page < 1) Page = 1;
+            if (_page < 0) _page = 0;
 
-            int pagesCount = Items.Length % ItemsPerPage > 0
-                ? Items.Length / ItemsPerPage + 1
-                : Items.Length / ItemsPerPage;
-            Page = pagesCount >= Page ? Page : pagesCount;
-
-            int startProductId = (Page - 1) * ItemsPerPage;
-            int endProductId = Page == pagesCount ? Items.Length : Page * ItemsPerPage;
+            int startProductId = _page * ItemsPerPage;
+            int endProductId = _page == _pagesCount - 1 ? Items.Length : (_page + 1) * ItemsPerPage;
             ItemsContainer.GetComponent<RectTransform>().sizeDelta = new Vector2(0, 0);
-            for (int i = startProductId; i < endProductId; i++)
+            int itemsPerPageCount = endProductId - startProductId;
+            if (itemsPerPageCount > 0)
             {
-                Items[i].Create(Loader.Instantiate(Resources.Load<GameObject>("productItem")), ItemsContainer.transform);
+                for (int i = startProductId; i < endProductId; i++)
+                {
+                    Items[i]
+                        .Create(Loader.Instantiate(Resources.Load<GameObject>(_itemsResourceName)),
+                            ItemsContainer.transform);
 
-                Vector2 sizeContainer = Items[i].ContainerGameObject.GetComponent<RectTransform>().sizeDelta;
-                ItemsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, sizeContainer.y);
-                Items[i].ContainerGameObject.GetComponent<RectTransform>().anchoredPosition =
-                    new Vector2(0, -sizeContainer.y / 2 - (i - startProductId) * sizeContainer.y);
+                    Vector2 sizeContainer = Items[i].ContainerGameObject.GetComponent<RectTransform>().sizeDelta;
+                    ItemsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, sizeContainer.y);
+                    Items[i].ContainerGameObject.GetComponent<RectTransform>().anchoredPosition =
+                        new Vector2(0, -sizeContainer.y / 2 - (i - startProductId) * sizeContainer.y);
+                }
+            }
+            else if (DefaultText != null)
+            {
+                DefaultText.text = "Поиск не дал результатов...";
             }
             if (BottomPanel != null)
             {

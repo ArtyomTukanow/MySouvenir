@@ -8,7 +8,7 @@ namespace Panels
         public GameObject ItemsContainer { set; get; }
 
         private T[] _items;
-        public T[] Items
+        public virtual T[] Items
         {
             set
             {

@@ -37,11 +37,8 @@ namespace Managers
             if (!String.IsNullOrEmpty(jsonData))
             {
                 productsList = JsonUtility.FromJson<Products>(jsonData);
-                if (productsList.products.Length > 0)
-                {
-                    ItemsLayer.instance.ScrollPanel.Items = productsList.products;
-                    ItemsLayer.instance.ScrollPanel.LoadItems(1); //загружаем первую страницу
-                }
+                ItemsLayer.instance.itemsScrollPanel.Items = productsList.products;
+                ItemsLayer.instance.itemsScrollPanel.LoadItems(0); //загружаем первую страницу
             }
         }
 
@@ -64,8 +61,8 @@ namespace Managers
                 product = JsonUtility.FromJson<Product>(jsonData);
                 if (product.product_id >= 0)
                 {
-//                    ItemsLayer.instance.ScrollPanel.Items = productsList.products;
-//                    ItemsLayer.instance.ScrollPanel.LoadItems(1); //загружаем первую страницу
+//                    ItemsLayer.instance.itemsScrollPanel.Items = productsList.products;
+//                    ItemsLayer.instance.itemsScrollPanel.LoadItems(1); //загружаем первую страницу
                 }
             }
         }
