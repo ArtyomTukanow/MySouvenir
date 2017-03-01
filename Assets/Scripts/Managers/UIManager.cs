@@ -45,6 +45,7 @@ namespace Managers
 
 
 
+        private LayerNamesEnum _lastLayer;
         private LayerNamesEnum _layer = LayerNamesEnum.none;
 
         /// <summary>
@@ -62,6 +63,7 @@ namespace Managers
                         layer.OnDisable();
                     }
                 }
+                _lastLayer = _layer;
                 _layer = value;
                 foreach (ILayerBase layer in Layers) //enable new layers
                 {
@@ -81,6 +83,11 @@ namespace Managers
             {
                 return _layer;
             }
+        }
+
+        public void GoBackToLastLayer()
+        {
+            Layer = _lastLayer;
         }
 
 

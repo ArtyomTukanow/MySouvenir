@@ -1,5 +1,6 @@
 ﻿using System;
 using Assets.Scripts.Layers;
+using Assets.Scripts.Layers.Enum;
 using Net;
 using Items;
 using UnityEngine;
@@ -29,10 +30,11 @@ namespace Managers
 
         public void ProductsLoad(params string[] tags)
         {
-            NetManager.LoadText(NetManager.MainUrl + "get-products.php", new URLVariables(tags), DecodeJsonProducts);
+            ApplicationManager.uiManager.Layer = LayerNamesEnum.items;
+            NetManager.LoadText(NetManager.MainUrl + "get-products.php", new URLVariables(tags), OnLoadProductsText);
         }
 
-        private void DecodeJsonProducts(string jsonData)
+        private void OnLoadProductsText(string jsonData)
         {
             if (!String.IsNullOrEmpty(jsonData))
             {
@@ -44,25 +46,26 @@ namespace Managers
 
 
 
-        private Product product;
+        private ProductFull product;
 
         public void ProductLoad(int id)
         {
+            ApplicationManager.uiManager.Layer = LayerNamesEnum.item;
             URLVariables variables = new URLVariables();
             variables.Names = new[] {"id"};
             variables.Params = new[] {id.ToString()};
-            NetManager.LoadText(NetManager.MainUrl + "get-product-by-id.php", variables, DecodeJsonProduct);
+            NetManager.LoadText(NetManager.MainUrl + "get-product-by-id.php", variables, OnLoadProductText);
         }
 
-        private void DecodeJsonProduct(string jsonData)
+        private void OnLoadProductText(string jsonData)
         {
             if (!String.IsNullOrEmpty(jsonData))
             {
-                product = JsonUtility.FromJson<Product>(jsonData);
+                product = JsonUtility.FromJson<ProductFull>(jsonData);
                 if (product.product_id >= 0)
                 {
-//                    ProductsLayer.instance.itemsScrollPanel.Items = productsList.products;
-//                    ProductsLayer.instance.itemsScrollPanel.LoadItems(0); //загружаем первую страницу
+                    ProductLayer.instance.itemScrollPanel.Items = new []{product};
+                    ProductLayer.instance.itemScrollPanel.LoadItems(); //загружаем первую страницу
                 }
             }
         }

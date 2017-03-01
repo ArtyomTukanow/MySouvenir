@@ -2,7 +2,6 @@
 using Net;
 using UnityEngine;
 using UnityEngine.UI;
-using Utils;
 
 namespace Items
 {
