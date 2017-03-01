@@ -33,6 +33,8 @@ namespace Items
             base.Create(container, parent);
 
             ProductImgGameObject = ContainerGameObject.transform.FindChild("product_image").GetComponent<Image>();
+            ProductImgGameObject.preserveAspect = true;
+            ProductImgGameObject.type = Image.Type.Simple;
             ProductNameGameObject = ContainerGameObject.transform.FindChild("product_name").GetComponent<Text>();
             //ProductDescriptionGameObject = ContainerGameObject.transform.FindChild("product_description").GetComponent<Text>();
             PriceGameObject = ContainerGameObject.transform.FindChild("product_price").GetComponent<Text>();
@@ -55,7 +57,6 @@ namespace Items
         {
             base.OnClick();
             ApplicationManager.productManager.ProductLoad(product_id);
-            //Application.OpenURL(product_url);
         }
     }
 
@@ -80,6 +81,8 @@ namespace Items
             base.Create(container, parent);
 
             ProductImgGameObject = ContainerGameObject.transform.FindChild("product_image").GetComponent<Image>();
+            ProductImgGameObject.preserveAspect = true;
+            ProductImgGameObject.type = Image.Type.Simple;
             ProductNameGameObject = ProductImgGameObject.transform.FindChild("product_name").GetComponent<Text>();
             ProductDescriptionGameObject = ContainerGameObject.transform.FindChild("product_description").GetComponent<Text>();
             PriceGameObject = ProductImgGameObject.transform.FindChild("product_price").GetComponent<Text>();
