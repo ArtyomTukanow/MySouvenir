@@ -62,7 +62,7 @@ namespace Managers
                 if (product.product_id >= 0)
                 {
 //                    ItemsLayer.instance.itemsScrollPanel.Items = productsList.products;
-//                    ItemsLayer.instance.itemsScrollPanel.LoadItems(1); //загружаем первую страницу
+//                    ItemsLayer.instance.itemsScrollPanel.LoadItems(0); //загружаем первую страницу
                 }
             }
         }

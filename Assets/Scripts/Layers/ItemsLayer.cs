@@ -31,10 +31,10 @@ namespace Assets.Scripts.Layers
             itemsSearchPanel.OnSearch = delegate { ApplicationManager.productManager.ProductsLoad(itemsSearchPanel.SearchInputField.text); };
 
             itemsScrollPanel = new ScrollPanelBase<Product>("productsItems", GameObject.Find("itemsContent"));
-            itemsScrollPanel.DefaultText = GameObject.Find("defaultText").GetComponent<Text>();
+            itemsScrollPanel.DefaultText = GameObject.Find("ItemsText").GetComponent<Text>();
             itemsScrollPanel.NextArrow = GameObject.Find("nextItemsPageButton").GetComponent<Button>();
             itemsScrollPanel.PrevArrow = GameObject.Find("prevItemsPageButton").GetComponent<Button>();
-            itemsScrollPanel.BottomPanel = GameObject.Find("bottomItemsBar");
+            //itemsScrollPanel.BottomPanel = GameObject.Find("bottomItemsBar");
 
             itemsScrollPanel.ReloadPanel();
             itemsSearchPanel.ReloadPanel();

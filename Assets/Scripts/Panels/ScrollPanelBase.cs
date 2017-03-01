@@ -53,7 +53,6 @@ namespace Panels
         //GAME OBJECTS
         public Button NextArrow;
         public Button PrevArrow;
-        public GameObject BottomPanel;
         private string _firstDefaultText;
         private Text _defaultText;
         public Text DefaultText
@@ -94,10 +93,11 @@ namespace Panels
         public override void LoadItems()
         {
             DestroyOldItems();
+            _page = _pagesCount > _page ? _page : _pagesCount - 1;
             if (_page < 0) _page = 0;
 
             int startProductId = _page * ItemsPerPage;
-            int endProductId = _page == _pagesCount - 1 ? Items.Length : (_page + 1) * ItemsPerPage;
+            int endProductId = _page == _pagesCount - 1 || _pagesCount == 0 ? Items.Length : (_page + 1) * ItemsPerPage;
             ItemsContainer.GetComponent<RectTransform>().sizeDelta = new Vector2(0, 0);
             int itemsPerPageCount = endProductId - startProductId;
             if (itemsPerPageCount > 0)
@@ -117,12 +117,6 @@ namespace Panels
             else if (DefaultText != null)
             {
                 DefaultText.text = "Поиск не дал результатов...";
-            }
-            if (BottomPanel != null)
-            {
-                ItemsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, BottomPanel.GetComponent<RectTransform>().sizeDelta.y);
-                BottomPanel.transform.parent = ItemsContainer.transform;
-                BottomPanel.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
             }
         }
 
