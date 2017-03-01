@@ -101,7 +101,7 @@ namespace Panels
                 for (int i = startProductId; i < endProductId; i++)
                 {
                     Items[i]
-                        .Create(Loader.Instantiate(Resources.Load<GameObject>(_itemsResourceName)),
+                        .Create(Loader.Instantiate(Resources.Load<GameObject>("GameObjects/"+_itemsResourceName)),
                             ItemsContainer.transform);
 
                     Vector2 sizeContainer = Items[i].ContainerGameObject.GetComponent<RectTransform>().sizeDelta;

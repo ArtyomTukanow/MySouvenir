@@ -29,6 +29,12 @@ namespace Panels
                 item.Remove();
         }
 
+        /// <summary>
+        /// Новя панель
+        /// </summary>
+        /// <param name="itemsResourceName">GameObject, нахоящийся в папке GameObjects</param>
+        /// <param name="panel"></param>
+        /// <param name="parent"></param>
         public PanelBase(string itemsResourceName, GameObject panel, GameObject parent = null)
         {
             _itemsResourceName = itemsResourceName;
@@ -47,7 +53,7 @@ namespace Panels
             int i = 0;
             foreach (T item in Items)
             {
-                item.Create(Loader.Instantiate(Resources.Load<GameObject>(_itemsResourceName)), ItemsContainer.transform);
+                item.Create(Loader.Instantiate(Resources.Load<GameObject>("GameObjects/"+_itemsResourceName)), ItemsContainer.transform);
 
                 Vector2 sizeContainer = Items[i].ContainerGameObject.GetComponent<RectTransform>().sizeDelta;
                 ItemsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, sizeContainer.y);

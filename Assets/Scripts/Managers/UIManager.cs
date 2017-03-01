@@ -18,8 +18,8 @@ namespace Managers
         {
             AboughtLayer.instance,
             HowItsWorkLayer.instance,
-            ItemLayer.instance,
-            ItemsLayer.instance,
+            ProductLayer.instance,
+            ProductsLayer.instance,
             NewsLayer.instance,
             ShopLayer.instance,
             TestLayer.instance

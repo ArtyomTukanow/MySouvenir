@@ -53,9 +53,9 @@
      <Compile Include="Assets\Scripts\Layers\Enum\LayerNamesEnum.cs" />
      <Compile Include="Assets\Scripts\Layers\HowItsWorkLayer.cs" />
      <Compile Include="Assets\Scripts\Layers\Interface\ILayerBase.cs" />
-     <Compile Include="Assets\Scripts\Layers\ItemLayer.cs" />
-     <Compile Include="Assets\Scripts\Layers\ItemsLayer.cs" />
      <Compile Include="Assets\Scripts\Layers\NewsLayer.cs" />
+     <Compile Include="Assets\Scripts\Layers\ProductLayer.cs" />
+     <Compile Include="Assets\Scripts\Layers\ProductsLayer.cs" />
      <Compile Include="Assets\Scripts\Layers\ShopLayer.cs" />
      <Compile Include="Assets\Scripts\Layers\TestLayer.cs" />
      <Compile Include="Assets\Scripts\Loader.cs" />

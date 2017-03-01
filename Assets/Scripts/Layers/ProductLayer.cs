@@ -3,17 +3,17 @@ using UnityEngine;
 
 namespace Assets.Scripts.Layers
 {
-    public class ItemLayer : ILayerBase
+    public class ProductLayer : ILayerBase
     {
-        private GameObject _canvas = GameObject.Find("itemCanvas");
+        private GameObject _canvas = GameObject.Find("productCanvas");
         private LayerNamesEnum _name = LayerNamesEnum.item;
 
         public LayerNamesEnum Name { get { return _name; } }
         public GameObject Canvas { get { return _canvas; } }
 
-        public static ItemLayer instance = new ItemLayer();
+        public static ProductLayer instance = new ProductLayer();
 
-        private ItemLayer()
+        private ProductLayer()
         {
 
         }

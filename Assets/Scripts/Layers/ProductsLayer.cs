@@ -7,9 +7,9 @@ using UnityEngine.UI;
 
 namespace Assets.Scripts.Layers
 {
-    public class ItemsLayer : ILayerBase
+    public class ProductsLayer : ILayerBase
     {
-        private GameObject _canvas = GameObject.Find("itemsCanvas");
+        private GameObject _canvas = GameObject.Find("productsCanvas");
         private LayerNamesEnum _name = LayerNamesEnum.items;
 
         public ScrollPanelBase<Product> itemsScrollPanel;
@@ -25,13 +25,13 @@ namespace Assets.Scripts.Layers
             get { return _canvas; }
         }
 
-        private ItemsLayer()
+        private ProductsLayer()
         {
-            itemsSearchPanel = new SearchPanel(GameObject.Find("itemsSearchPanel"));
+            itemsSearchPanel = new SearchPanel(GameObject.Find("productsSearchPanel"));
             itemsSearchPanel.OnSearch = delegate { ApplicationManager.productManager.ProductsLoad(itemsSearchPanel.SearchInputField.text); };
 
-            itemsScrollPanel = new ScrollPanelBase<Product>("productsItems", GameObject.Find("itemsContent"));
-            itemsScrollPanel.DefaultText = GameObject.Find("ItemsText").GetComponent<Text>();
+            itemsScrollPanel = new ScrollPanelBase<Product>("productsItems", GameObject.Find("productsContent"));
+            itemsScrollPanel.DefaultText = GameObject.Find("productsText").GetComponent<Text>();
             itemsScrollPanel.NextArrow = GameObject.Find("nextItemsPageButton").GetComponent<Button>();
             itemsScrollPanel.PrevArrow = GameObject.Find("prevItemsPageButton").GetComponent<Button>();
             //itemsScrollPanel.BottomPanel = GameObject.Find("bottomItemsBar");
@@ -40,7 +40,7 @@ namespace Assets.Scripts.Layers
             itemsSearchPanel.ReloadPanel();
         }
 
-        public static ItemsLayer instance = new ItemsLayer();
+        public static ProductsLayer instance = new ProductsLayer();
 
 
 
