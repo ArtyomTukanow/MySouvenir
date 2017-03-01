@@ -1,5 +1,4 @@
-﻿using System;
-using Items.Interface;
+﻿using Items.Interface;
 using UnityEngine;
 using UnityEngine.UI;
 using Utils;
@@ -48,8 +47,6 @@ namespace Panels
             }
         }
 
-        private string _itemsResourceName;
-
         //GAME OBJECTS
         public Button NextArrow;
         public Button PrevArrow;
@@ -66,9 +63,8 @@ namespace Panels
         }
 
         public ScrollPanelBase(string itemsResourceName, GameObject panel, GameObject parent = null)
-            : base (panel, panel)
+            : base (itemsResourceName, panel, parent)
         {
-            _itemsResourceName = itemsResourceName;
             ItemsPerPage = 10;
         }
 

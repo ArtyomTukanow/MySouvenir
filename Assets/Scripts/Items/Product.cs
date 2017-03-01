@@ -3,7 +3,6 @@ using Items.Interface;
 using Net;
 using UnityEngine;
 using UnityEngine.UI;
-using Utils;
 
 namespace Items
 {
@@ -24,7 +23,7 @@ namespace Items
         public string price;
 
         public Text ProductNameGameObject;
-        public Text ProductDescriptionGameObject;
+        //public Text ProductDescriptionGameObject;
         public Image ProductImgGameObject;
         public Text PriceGameObject;
 
@@ -34,14 +33,14 @@ namespace Items
 
             ProductImgGameObject = ContainerGameObject.transform.FindChild("product_image").GetComponent<Image>();
             ProductNameGameObject = ContainerGameObject.transform.FindChild("product_name").GetComponent<Text>();
-            ProductDescriptionGameObject = ContainerGameObject.transform.FindChild("product_description").GetComponent<Text>();
+            //ProductDescriptionGameObject = ContainerGameObject.transform.FindChild("product_description").GetComponent<Text>();
             PriceGameObject = ContainerGameObject.transform.FindChild("product_price").GetComponent<Text>();
 
             //загружаем картинку
             ImageLoadConnection = NetManager.LoadImage(product_img, null, OnLoadImage);
             //Добавляем описание и проч.
             ProductNameGameObject.text = product_name;
-            ProductDescriptionGameObject.text = product_description;
+            //ProductDescriptionGameObject.text = product_description;
             PriceGameObject.text = price + "руб";
         }
 

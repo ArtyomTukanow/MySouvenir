@@ -7,6 +7,8 @@ namespace Panels
     {
         public GameObject ItemsContainer { set; get; }
 
+        protected string _itemsResourceName;
+
         private T[] _items;
         public virtual T[] Items
         {
@@ -27,8 +29,9 @@ namespace Panels
                 item.Remove();
         }
 
-        public PanelBase(GameObject panel, GameObject parent = null)
+        public PanelBase(string itemsResourceName, GameObject panel, GameObject parent = null)
         {
+            _itemsResourceName = itemsResourceName;
             ItemsContainer = panel;
             if(parent != null)
                 ItemsContainer.transform.parent = parent.transform;
@@ -44,7 +47,7 @@ namespace Panels
             int i = 0;
             foreach (T item in Items)
             {
-                item.Create(Loader.Instantiate(Resources.Load<GameObject>("productItem")), ItemsContainer.transform);
+                item.Create(Loader.Instantiate(Resources.Load<GameObject>(_itemsResourceName)), ItemsContainer.transform);
 
                 Vector2 sizeContainer = Items[i].ContainerGameObject.GetComponent<RectTransform>().sizeDelta;
                 ItemsContainer.GetComponent<RectTransform>().sizeDelta += new Vector2(0, sizeContainer.y);
