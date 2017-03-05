@@ -28,5 +28,10 @@ namespace Assets.Scripts.Layers
         {
 
         }
+
+        public void OnReload()
+        {
+
+        }
     }
 }

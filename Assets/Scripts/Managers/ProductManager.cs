@@ -40,7 +40,7 @@ namespace Managers
             {
                 productsList = JsonUtility.FromJson<Products>(jsonData);
                 ProductsLayer.instance.itemsScrollPanel.Items = productsList.products;
-                ProductsLayer.instance.itemsScrollPanel.LoadItems(0); //загружаем первую страницу
+                ProductsLayer.instance.OnReload();
             }
         }
 
@@ -65,7 +65,7 @@ namespace Managers
                 if (product.product_id >= 0)
                 {
                     ProductLayer.instance.itemScrollPanel.Items = new []{product};
-                    ProductLayer.instance.itemScrollPanel.LoadItems(); //загружаем первую страницу
+                    ProductLayer.instance.OnReload();
                 }
             }
         }

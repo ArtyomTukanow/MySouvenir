@@ -16,5 +16,9 @@ namespace Assets.Scripts.Layers
         /// Метод запускается при деактивации окна
         /// </summary>
         void OnDisable();
+        /// <summary>
+        /// Метод перезагружает окно
+        /// </summary>
+        void OnReload();
     }
 }

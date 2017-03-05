@@ -1,7 +1,6 @@
 ﻿using Items.Interface;
 using UnityEngine;
 using UnityEngine.UI;
-using Utils;
 
 namespace Panels
 {
@@ -88,6 +87,9 @@ namespace Panels
 
         public override void LoadItems()
         {
+            if(Items == null || Items.Length == 0)
+                return;
+
             DestroyOldItems();
             _page = _pagesCount > _page ? _page : _pagesCount - 1;
             if (_page < 0) _page = 0;
