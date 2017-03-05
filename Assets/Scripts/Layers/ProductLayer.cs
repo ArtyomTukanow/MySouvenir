@@ -38,7 +38,7 @@ namespace Assets.Scripts.Layers
 
         public void OnDisable()
         {
-
+            itemScrollPanel.DestroyOldItems();
         }
 
         public void OnReload()

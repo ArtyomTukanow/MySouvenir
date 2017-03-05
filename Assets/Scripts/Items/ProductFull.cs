@@ -20,10 +20,12 @@ namespace Items
         public string shop_name;
         public string shop_img;
         public string shop_adress;
+        public string shop_url;
 
         public Text ProductName;
         public Text ProductDescription;
         public Image ProductImage;
+        public Button ProductImageButton;
         public Text PriceGameObject;
         public Button GoBackButton;
 
@@ -31,6 +33,7 @@ namespace Items
         public Button ShopUrlButton;
         public Button ItemUrlButton;
         public Image ShopImage;
+        public Button ShopImageButton;
         public Text ShopAdress;
 
         public void Create(GameObject container, Transform parent)
@@ -51,7 +54,31 @@ namespace Items
             ShopImage = ProductImage.transform.FindChild("shop_image").GetComponent<Image>();
             ShopAdress = ContainerGameObject.transform.FindChild("shop_adress").GetComponent<Text>();
 
+            ProductImageButton = ContainerGameObject.transform.FindChild("product_image").GetComponent<Button>();
+            ShopImageButton = ProductImage.transform.FindChild("shop_image").GetComponent<Button>();
+
             GoBackButton.onClick.AddListener(ApplicationManager.uiManager.GoBackToLastLayer);
+            ProductImageButton.onClick.AddListener(delegate
+            {
+                Application.OpenURL(product_url);
+            });
+            ItemUrlButton.onClick.AddListener(delegate
+            {
+                Application.OpenURL(product_url);
+            });
+            ShopImageButton.onClick.AddListener(delegate
+            {
+                Application.OpenURL(shop_url);
+            });
+            ShopInfoButton.onClick.AddListener(delegate
+            {
+                //fixme HERE MUST ME OPEN SHOP PAGE
+            });
+            ShopUrlButton.onClick.AddListener(delegate
+            {
+                Application.OpenURL(shop_url);
+            });
+
 
             //загружаем картинку
             ImageLoadConnection = NetManager.LoadImage(product_img, null, OnLoadImage);
@@ -64,7 +91,6 @@ namespace Items
                 ShopAdress.text = shop_adress;
             ShopInfoButton.GetComponentInChildren<Text>().text = "Подробнее о \"" + shop_name + "\"";
             ShopUrlButton.GetComponentInChildren<Text>().text = "Перейти на сайт \"" + shop_name + "\"";
-
         }
 
         protected override void OnLoadImage(Texture2D texture2D)
@@ -83,7 +109,6 @@ namespace Items
         protected override void OnClick()
         {
             base.OnClick();
-            Application.OpenURL(product_url);
         }
     }
 }
