@@ -51,8 +51,7 @@ namespace Managers
         public void ProductLoad(int id)
         {
             URLVariables variables = new URLVariables();
-            variables.Names = new[] {"id"};
-            variables.Params = new[] {id.ToString()};
+            variables.Add("id", id.ToString());
             NetManager.LoadText(NetManager.MainUrl + "get-product-by-id.php", variables, OnLoadProductText);
         }
 

@@ -14,7 +14,7 @@ namespace Net
         public static NetConnection LoadText(string url, URLVariables urlParams = null, Action<string> onComplete = null, Action<object> onError = null)
         {
             if(urlParams != null)
-                url = url + urlParams.GetString;
+                url = url + urlParams.URLString;
 
             NetConnection connection = new NetConnection();
             connection.LoadText(url, onComplete, onError);
@@ -26,7 +26,7 @@ namespace Net
         public static NetConnection LoadImage(string url, URLVariables urlParams = null, Action<Texture2D> onComplete = null, Action<object> onError = null)
         {
             if(urlParams != null)
-                url = url + urlParams.GetString;
+                url = url + urlParams.URLString;
 
             NetConnection connection = new NetConnection();
             connection.LoadImage(url, onComplete, onError);
