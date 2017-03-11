@@ -7,12 +7,13 @@ namespace Managers
         {
         }
 
-        public static UIManager uiManager {get { return UIManager.instance; }}
-        public static ProductManager productManager {get { return ProductManager.instance; }}
+        public static UIManager UiManager {get { return UIManager.instance; }}
+        public static ProductManager ProductManager {get { return ProductManager.instance; }}
+        public static TestManager TestManager {get {return  TestManager.instance; }}
 
         public static void Start()
         {
-            uiManager.Start();
+            UiManager.Start();
         }
     }
 }

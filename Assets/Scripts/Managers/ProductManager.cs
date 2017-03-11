@@ -16,21 +16,22 @@ namespace Managers
         }
 
         private Products productsList;
+        private Action<Products> _currentCallback;
 
 
-        public void ProductsLoad(string tagsString)
+        public void ProductsLoad(Action<Products> callback, string tagsString)
         {
             //Теги в одну строку. Необходимо распарсить строку, убрать ' ' и ','
             tagsString = tagsString.Trim();
             tagsString = tagsString.Replace(",", "");
             Log.d(tagsString);
             string[] tags = tagsString.Split(' ');
-            ProductsLoad(tags);
+            ProductsLoad(callback, tags);
         }
 
-        public void ProductsLoad(params string[] tags)
+        public void ProductsLoad(Action<Products> callback, params string[] tags)
         {
-            ApplicationManager.uiManager.Layer = LayerNamesEnum.items;
+            _currentCallback = callback;
             NetManager.LoadText(NetManager.MainUrl + "get-products.php", new URLVariables(tags), OnLoadProductsText);
         }
 
@@ -39,8 +40,7 @@ namespace Managers
             if (!String.IsNullOrEmpty(jsonData))
             {
                 productsList = JsonUtility.FromJson<Products>(jsonData);
-                ProductsLayer.instance.itemsScrollPanel.Items = productsList.products;
-                ProductsLayer.instance.OnReload();
+                _currentCallback(productsList);
             }
         }
 
@@ -50,7 +50,6 @@ namespace Managers
 
         public void ProductLoad(int id)
         {
-            ApplicationManager.uiManager.Layer = LayerNamesEnum.item;
             URLVariables variables = new URLVariables();
             variables.Names = new[] {"id"};
             variables.Params = new[] {id.ToString()};

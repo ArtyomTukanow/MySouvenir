@@ -57,7 +57,7 @@ namespace Items
             ProductImageButton = ContainerGameObject.transform.FindChild("product_image").GetComponent<Button>();
             ShopImageButton = ProductImage.transform.FindChild("shop_image").GetComponent<Button>();
 
-            GoBackButton.onClick.AddListener(ApplicationManager.uiManager.GoBackToLastLayer);
+            GoBackButton.onClick.AddListener(ApplicationManager.UiManager.GoBackToLastLayer);
             ProductImageButton.onClick.AddListener(delegate
             {
                 Application.OpenURL(product_url);

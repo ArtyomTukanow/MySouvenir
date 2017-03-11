@@ -1,4 +1,5 @@
 ﻿using System;
+using Assets.Scripts.Layers.Enum;
 using Items.Interface;
 using Managers;
 using Net;
@@ -50,7 +51,8 @@ namespace Items
         protected override void OnClick()
         {
             base.OnClick();
-            ApplicationManager.productManager.ProductLoad(product_id);
+            ApplicationManager.UiManager.Layer = LayerNamesEnum.item;
+            ApplicationManager.ProductManager.ProductLoad(product_id);
         }
     }
 }

@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\Loader.cs" />
      <Compile Include="Assets\Scripts\Managers\ApplicationManager.cs" />
      <Compile Include="Assets\Scripts\Managers\ProductManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\TestManager.cs" />
      <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
      <Compile Include="Assets\Scripts\Net\NetConnection.cs" />
      <Compile Include="Assets\Scripts\Net\NetManager.cs" />

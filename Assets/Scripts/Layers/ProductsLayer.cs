@@ -28,7 +28,11 @@ namespace Assets.Scripts.Layers
         private ProductsLayer()
         {
             itemsSearchPanel = new SearchPanel(GameObject.Find("productsSearchPanel"));
-            itemsSearchPanel.OnSearch = delegate { ApplicationManager.productManager.ProductsLoad(itemsSearchPanel.SearchInputField.text); };
+            itemsSearchPanel.OnSearch = delegate
+            {
+                ApplicationManager.UiManager.Layer = LayerNamesEnum.items;
+                ApplicationManager.ProductManager.ProductsLoad(OnProductsLoad, itemsSearchPanel.SearchInputField.text);
+            };
 
             itemsScrollPanel = new ScrollPanelBase<Product>("productsItems", GameObject.Find("productsContent"));
             itemsScrollPanel.DefaultText = GameObject.Find("productsText").GetComponent<Text>();
@@ -38,6 +42,12 @@ namespace Assets.Scripts.Layers
 
             itemsScrollPanel.ReloadPanel();
             itemsSearchPanel.ReloadPanel();
+        }
+
+        private void OnProductsLoad(Products products)
+        {
+            itemsScrollPanel.Items = products.products;
+            OnReload();
         }
 
         public static ProductsLayer instance = new ProductsLayer();
