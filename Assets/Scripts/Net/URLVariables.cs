@@ -4,8 +4,9 @@ namespace Net
 {
     public class URLVariables : Dictionary<string, string>
     {
-//        public string[] Params;
-//        public string[] Names;
+        public const string MIN_PRICE = "min_price";
+        public const string MAX_PRICE = "max_price";
+
         private int _counter = 0;
 
         public URLVariables(params string[] tags)
@@ -34,35 +35,5 @@ namespace Net
                 return output;
             }
         }
-
-
-//        public URLVariables(params string[] _params)
-//        {
-//            Params = _params;
-//        }
-//
-//        public string GetString
-//        {
-//            get
-//            {
-//                string output = "?";
-//                    if(Params != null && Params.Length > 0)
-//                    {
-//                        for (int i = 0; i < Params.Length; i++)
-//                        {
-//                            if (Names == null || Names.Length <= i)
-//                            {
-//                                output += "param" + i + "=" + Params[i] + "&";
-//                            }
-//                            else
-//                            {
-//                                output += Names[i] + "=" + Params[i] + "&";
-//                            }
-//                        }
-//                    }
-//
-//                return output;
-//            }
-//        }
     }
 }

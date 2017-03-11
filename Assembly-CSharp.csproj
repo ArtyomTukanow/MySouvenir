@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{31C629E6-E8CD-7E5E-8651-19C67F0C325C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -46,52 +47,51 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Items\Interface\IItemBase.cs" />
-     <Compile Include="Assets\Scripts\Items\ItemBase.cs" />
-     <Compile Include="Assets\Scripts\Items\Product.cs" />
-     <Compile Include="Assets\Scripts\Items\ProductFull.cs" />
-     <Compile Include="Assets\Scripts\Items\Products.cs" />
-     <Compile Include="Assets\Scripts\Layers\AboughtLayer.cs" />
-     <Compile Include="Assets\Scripts\Layers\Enum\LayerNamesEnum.cs" />
-     <Compile Include="Assets\Scripts\Layers\HowItsWorkLayer.cs" />
-     <Compile Include="Assets\Scripts\Layers\Interface\ILayerBase.cs" />
-     <Compile Include="Assets\Scripts\Layers\NewsLayer.cs" />
-     <Compile Include="Assets\Scripts\Layers\ProductLayer.cs" />
-     <Compile Include="Assets\Scripts\Layers\ProductsLayer.cs" />
-     <Compile Include="Assets\Scripts\Layers\ShopLayer.cs" />
-     <Compile Include="Assets\Scripts\Layers\TestLayer.cs" />
-     <Compile Include="Assets\Scripts\Loader.cs" />
-     <Compile Include="Assets\Scripts\Managers\ApplicationManager.cs" />
-     <Compile Include="Assets\Scripts\Managers\ProductManager.cs" />
-     <Compile Include="Assets\Scripts\Managers\TestManager.cs" />
-     <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
-     <Compile Include="Assets\Scripts\Net\NetConnection.cs" />
-     <Compile Include="Assets\Scripts\Net\NetManager.cs" />
-     <Compile Include="Assets\Scripts\Net\URLVariables.cs" />
-     <Compile Include="Assets\Scripts\Panels\Interface\IPanel.cs" />
-     <Compile Include="Assets\Scripts\Panels\Interface\IPanelItems.cs" />
-     <Compile Include="Assets\Scripts\Panels\PanelBase.cs" />
-     <Compile Include="Assets\Scripts\Panels\ScrollPanelBase.cs" />
-     <Compile Include="Assets\Scripts\Panels\SearchPanel.cs" />
-     <Compile Include="Assets\Scripts\Utils\Log.cs" />
- <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Networking">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.PlaymodeTestsRunner">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.HoloLens">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.VR">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
- </Reference>
+    <Compile Include="Assets\Scripts\Items\Interface\IItemBase.cs" />
+    <Compile Include="Assets\Scripts\Items\ItemBase.cs" />
+    <Compile Include="Assets\Scripts\Items\Product.cs" />
+    <Compile Include="Assets\Scripts\Items\ProductFull.cs" />
+    <Compile Include="Assets\Scripts\Items\Products.cs" />
+    <Compile Include="Assets\Scripts\Layers\AboughtLayer.cs" />
+    <Compile Include="Assets\Scripts\Layers\Enum\LayerNamesEnum.cs" />
+    <Compile Include="Assets\Scripts\Layers\HowItsWorkLayer.cs" />
+    <Compile Include="Assets\Scripts\Layers\Interface\ILayerBase.cs" />
+    <Compile Include="Assets\Scripts\Layers\NewsLayer.cs" />
+    <Compile Include="Assets\Scripts\Layers\ProductLayer.cs" />
+    <Compile Include="Assets\Scripts\Layers\ProductsLayer.cs" />
+    <Compile Include="Assets\Scripts\Layers\ShopLayer.cs" />
+    <Compile Include="Assets\Scripts\Layers\TestLayer.cs" />
+    <Compile Include="Assets\Scripts\Loader.cs" />
+    <Compile Include="Assets\Scripts\Managers\ApplicationManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\ProductManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Net\NetConnection.cs" />
+    <Compile Include="Assets\Scripts\Net\NetManager.cs" />
+    <Compile Include="Assets\Scripts\Net\URLVariables.cs" />
+    <Compile Include="Assets\Scripts\Panels\Interface\IPanel.cs" />
+    <Compile Include="Assets\Scripts\Panels\Interface\IPanelItems.cs" />
+    <Compile Include="Assets\Scripts\Panels\PanelBase.cs" />
+    <Compile Include="Assets\Scripts\Panels\ScrollPanelBase.cs" />
+    <Compile Include="Assets\Scripts\Panels\SearchPanel.cs" />
+    <Compile Include="Assets\Scripts\Utils\Log.cs" />
+    <Reference Include="UnityEngine.UI">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PlaymodeTestsRunner">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VR">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -101,5 +101,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  
 </Project>
