@@ -17,7 +17,7 @@ namespace Assets.Scripts.Layers
 
         private TestLayer()
         {
-            DropDownPanel panel = new DropDownPanel(_canvas.transform, new Vector2(100, 100), "text 1", "text 2", "text 3");
+            DropDownPanel panel = new DropDownPanel(_canvas.transform, new Vector2(0, 0), "text 1", "text 2", "text 3");
         }
 
         public void OnVisable()

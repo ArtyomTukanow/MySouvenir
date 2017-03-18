@@ -2,24 +2,52 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d74f5103-6006-4598-8fdd-61c3f797f0c2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/TestManager.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/Panels/DropDownPanel.cs" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/GameObjects/standartSearchPanel.prefab" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/GameObjects/standartSearchPanel.prefab.meta" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Main.unity" afterPath="$PROJECT_DIR$/Assets/Main.unity" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" afterPath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Items.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Items/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Items/2.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Items/arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Items/arrow.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Items/exit-icon-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Items/exit-icon-3.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Items/gift.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Items/gift.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Items/handle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Items/handle.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Items/idea26.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Items/idea26.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Items/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Items/logo.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Items/menu.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Items/menu.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Items/new26.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Items/new26.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Items/search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Items/search.png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Items/shoping (1).png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Items/shoping (1).png.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Items/shoping.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Items/shoping.png.meta" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/assetDatabase3" afterPath="$PROJECT_DIR$/Library/assetDatabase3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/8a/8aa92f5bf90df9f46bbc37bad6fcb107" afterPath="$PROJECT_DIR$/Library/metadata/8a/8aa92f5bf90df9f46bbc37bad6fcb107" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/8a/8aa92f5bf90df9f46bbc37bad6fcb107.info" afterPath="$PROJECT_DIR$/Library/metadata/8a/8aa92f5bf90df9f46bbc37bad6fcb107.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/ce/ce3b0e80ce4196d4e86c19545d7c1cbc" afterPath="$PROJECT_DIR$/Library/metadata/ce/ce3b0e80ce4196d4e86c19545d7c1cbc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/02/02120fceb0ac91549bb2bdd1749ee908" afterPath="$PROJECT_DIR$/Library/metadata/02/02120fceb0ac91549bb2bdd1749ee908" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/08/08d62c817769a5948aebbda6105ba894" afterPath="$PROJECT_DIR$/Library/metadata/08/08d62c817769a5948aebbda6105ba894" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/0b/0b055afe965cee84cb90e16f10f7adbd" afterPath="$PROJECT_DIR$/Library/metadata/0b/0b055afe965cee84cb90e16f10f7adbd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/29/2996a831429763f4d93738836a91a0c7" afterPath="$PROJECT_DIR$/Library/metadata/29/2996a831429763f4d93738836a91a0c7" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/2d/2de255908edda134ca313fa562bcd144" afterPath="$PROJECT_DIR$/Library/metadata/2d/2de255908edda134ca313fa562bcd144" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/32/3243e71dd51d61b46ab7b12370f20e14" afterPath="$PROJECT_DIR$/Library/metadata/32/3243e71dd51d61b46ab7b12370f20e14" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/37/37389de14efb2ab478aa7722e1872285" afterPath="$PROJECT_DIR$/Library/metadata/37/37389de14efb2ab478aa7722e1872285" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/4b/4be3b4d94baad174fa9fa3b12b3f31da" afterPath="$PROJECT_DIR$/Library/metadata/4b/4be3b4d94baad174fa9fa3b12b3f31da" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/52/525a6f4f68db4fa42afc512433ba4316" afterPath="$PROJECT_DIR$/Library/metadata/52/525a6f4f68db4fa42afc512433ba4316" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/8c/8c202900c3b049343954341f9e35dbf3" afterPath="$PROJECT_DIR$/Library/metadata/8c/8c202900c3b049343954341f9e35dbf3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/91/91971a33075a60d4c942f52bfffd1c30" afterPath="$PROJECT_DIR$/Library/metadata/91/91971a33075a60d4c942f52bfffd1c30" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/91/91971a33075a60d4c942f52bfffd1c30.info" afterPath="$PROJECT_DIR$/Library/metadata/91/91971a33075a60d4c942f52bfffd1c30.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/c3/c3363c310512a9b48a916d7b2309af8a" afterPath="$PROJECT_DIR$/Library/metadata/c3/c3363c310512a9b48a916d7b2309af8a" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/cd/cd075cfdc7d00ef46bc2b1b74a81e8dc" afterPath="$PROJECT_DIR$/Library/metadata/cd/cd075cfdc7d00ef46bc2b1b74a81e8dc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/fc/fce88e0154d56494eac0ff17c57f2b22" afterPath="$PROJECT_DIR$/Library/metadata/fc/fce88e0154d56494eac0ff17c57f2b22" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.MySouvenir/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.MySouvenir/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Layers/TestLayer.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Layers/TestLayer.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/ApplicationManager.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/ApplicationManager.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Panels/DropDownPanel.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Panels/DropDownPanel.cs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,14 +84,14 @@
       <file leaf-file-name="DropDownPanel.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Panels/DropDownPanel.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+            <state relative-caret-position="284">
+              <caret line="29" column="15" lean-forward="true" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
               <folding>
-                <marker date="1489870447805" expanded="true" signature="6:87" ph="..." />
-                <marker date="1489870447805" expanded="true" signature="105:1745" ph="{...}" />
-                <marker date="1489870447805" expanded="true" signature="138:1743" ph="{...}" />
-                <marker date="1489870447805" expanded="true" signature="486:1737" ph="{...}" />
-                <marker date="1489870447805" expanded="true" signature="1062:1676" ph="{...}" />
+                <marker date="1489870825087" expanded="true" signature="6:87" ph="..." />
+                <marker date="1489870825087" expanded="true" signature="105:1847" ph="{...}" />
+                <marker date="1489870825087" expanded="true" signature="138:1845" ph="{...}" />
+                <marker date="1489870825087" expanded="true" signature="486:1839" ph="{...}" />
+                <marker date="1489870825087" expanded="true" signature="1164:1778" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -73,15 +101,15 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Layers/TestLayer.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="19" column="124" lean-forward="false" selection-start-line="19" selection-start-column="124" selection-end-line="19" selection-end-column="124" />
+              <caret line="19" column="49" lean-forward="false" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
               <folding>
-                <marker date="1489870447885" expanded="true" signature="6:66" ph="..." />
-                <marker date="1489870447885" expanded="true" signature="99:802" ph="{...}" />
-                <marker date="1489870447885" expanded="true" signature="141:800" ph="{...}" />
-                <marker date="1489870447885" expanded="true" signature="488:633" ph="{...}" />
-                <marker date="1489870447885" expanded="true" signature="666:687" ph="{...}" />
-                <marker date="1489870447885" expanded="true" signature="720:741" ph="{...}" />
-                <marker date="1489870447885" expanded="true" signature="773:794" ph="{...}" />
+                <marker date="1489870760550" expanded="true" signature="6:66" ph="..." />
+                <marker date="1489870760550" expanded="true" signature="99:798" ph="{...}" />
+                <marker date="1489870760550" expanded="true" signature="141:796" ph="{...}" />
+                <marker date="1489870760550" expanded="true" signature="488:629" ph="{...}" />
+                <marker date="1489870760550" expanded="true" signature="662:683" ph="{...}" />
+                <marker date="1489870760550" expanded="true" signature="716:737" ph="{...}" />
+                <marker date="1489870760550" expanded="true" signature="769:790" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -171,8 +199,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Net/URLVariables.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/ApplicationManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/TestManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Panels/DropDownPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Layers/TestLayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Panels/DropDownPanel.cs" />
       </list>
     </option>
   </component>
@@ -437,12 +465,12 @@
       <workItem from="1488720875261" duration="2594000" />
       <workItem from="1488737805508" duration="5969000" />
       <workItem from="1489229342630" duration="6610000" />
-      <workItem from="1489864547366" duration="4318000" />
+      <workItem from="1489864547366" duration="4665000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103252000" />
+    <option name="totallyTimeSpent" value="103599000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -454,7 +482,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -918,14 +946,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Panels/DropDownPanel.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        <state relative-caret-position="284">
+          <caret line="29" column="15" lean-forward="true" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
           <folding>
-            <marker date="1489870447805" expanded="true" signature="6:87" ph="..." />
-            <marker date="1489870447805" expanded="true" signature="105:1745" ph="{...}" />
-            <marker date="1489870447805" expanded="true" signature="138:1743" ph="{...}" />
-            <marker date="1489870447805" expanded="true" signature="486:1737" ph="{...}" />
-            <marker date="1489870447805" expanded="true" signature="1062:1676" ph="{...}" />
+            <marker date="1489870825087" expanded="true" signature="6:87" ph="..." />
+            <marker date="1489870825087" expanded="true" signature="105:1847" ph="{...}" />
+            <marker date="1489870825087" expanded="true" signature="138:1845" ph="{...}" />
+            <marker date="1489870825087" expanded="true" signature="486:1839" ph="{...}" />
+            <marker date="1489870825087" expanded="true" signature="1164:1778" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -933,15 +961,15 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Layers/TestLayer.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="124" lean-forward="false" selection-start-line="19" selection-start-column="124" selection-end-line="19" selection-end-column="124" />
+          <caret line="19" column="49" lean-forward="false" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
           <folding>
-            <marker date="1489870447885" expanded="true" signature="6:66" ph="..." />
-            <marker date="1489870447885" expanded="true" signature="99:802" ph="{...}" />
-            <marker date="1489870447885" expanded="true" signature="141:800" ph="{...}" />
-            <marker date="1489870447885" expanded="true" signature="488:633" ph="{...}" />
-            <marker date="1489870447885" expanded="true" signature="666:687" ph="{...}" />
-            <marker date="1489870447885" expanded="true" signature="720:741" ph="{...}" />
-            <marker date="1489870447885" expanded="true" signature="773:794" ph="{...}" />
+            <marker date="1489870760550" expanded="true" signature="6:66" ph="..." />
+            <marker date="1489870760550" expanded="true" signature="99:798" ph="{...}" />
+            <marker date="1489870760550" expanded="true" signature="141:796" ph="{...}" />
+            <marker date="1489870760550" expanded="true" signature="488:629" ph="{...}" />
+            <marker date="1489870760550" expanded="true" signature="662:683" ph="{...}" />
+            <marker date="1489870760550" expanded="true" signature="716:737" ph="{...}" />
+            <marker date="1489870760550" expanded="true" signature="769:790" ph="{...}" />
           </folding>
         </state>
       </provider>
