@@ -19,7 +19,7 @@ namespace Assets.Scripts.Layers
         public static TestLayer instance = new TestLayer();
 
 
-        private DropDownPanel _tag1;
+        private DropDownPanel _tagPanel;
         private Button _confirmButton;
         private Text _minPriceInput;
         private Text _maxPriceInput;
@@ -31,7 +31,16 @@ namespace Assets.Scripts.Layers
         {
             _confirmButton = _canvas.transform.FindChild("ConfirmButton").GetComponent<Button>();
             _confirmButton.onClick.AddListener(FindItems);
-            _tag1 = new DropDownPanel(_canvas.transform, new Vector2(0, 0), "Романтика", "Дом", "Работа");
+            _tagPanel = new DropDownPanel(_canvas.transform.FindChild("PanelGameObject"), new Vector2(0, 0),
+                "Парень",
+                "Девушка",
+                "Мама",
+                "Сестра",
+                "Коллега",
+                "Дом",
+                "Романтика",
+                "Ребенок",
+                "Маленький");
             _minPriceInput = _canvas.transform.FindChild("minPriceInput").FindChild("text").GetComponent<Text>();
             _maxPriceInput = _canvas.transform.FindChild("maxPriceInput").FindChild("text").GetComponent<Text>();
         }
@@ -59,7 +68,7 @@ namespace Assets.Scripts.Layers
                 urlVariables.Add(URLVariables.MIN_PRICE, _minPriceInput.text);
             if(_maxPriceInput.text != "")
                 urlVariables.Add(URLVariables.MAX_PRICE, _maxPriceInput.text);
-            urlVariables.Add(_tag1.value);
+            urlVariables.Add(_tagPanel.value);
             ApplicationManager.ProductManager.ProductsLoad(ProductsLayer.instance.OnProductsLoad, urlVariables);
         }
     }

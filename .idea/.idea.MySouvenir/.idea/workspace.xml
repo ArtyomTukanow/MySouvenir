@@ -2,20 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d74f5103-6006-4598-8fdd-61c3f797f0c2" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/BuiltinAssemblies.stamp" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Main.unity" afterPath="$PROJECT_DIR$/Assets/Main.unity" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/LastBuild.buildreport" afterPath="$PROJECT_DIR$/Library/LastBuild.buildreport" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/assetDatabase3" afterPath="$PROJECT_DIR$/Library/assetDatabase3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/05/05a46f6495d01a04f9482ec0aef3e925" afterPath="$PROJECT_DIR$/Library/metadata/05/05a46f6495d01a04f9482ec0aef3e925" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/26/266ed8beeabce7945a1301de3e15442c" afterPath="$PROJECT_DIR$/Library/metadata/26/266ed8beeabce7945a1301de3e15442c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/8e/8e6b68fbc758cf64aadab335366171c3" afterPath="$PROJECT_DIR$/Library/metadata/8e/8e6b68fbc758cf64aadab335366171c3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/00/00000000000000004000000000000000" afterPath="$PROJECT_DIR$/Library/metadata/00/00000000000000004000000000000000" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/fc/fce88e0154d56494eac0ff17c57f2b22" afterPath="$PROJECT_DIR$/Library/metadata/fc/fce88e0154d56494eac0ff17c57f2b22" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Windows/app_Data/Managed/Assembly-CSharp.dll" afterPath="$PROJECT_DIR$/Windows/app_Data/Managed/Assembly-CSharp.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Windows/app_Data/globalgamemanagers" afterPath="$PROJECT_DIR$/Windows/app_Data/globalgamemanagers" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Windows/app_Data/globalgamemanagers.assets" afterPath="$PROJECT_DIR$/Windows/app_Data/globalgamemanagers.assets" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Windows/app_Data/level0" afterPath="$PROJECT_DIR$/Windows/app_Data/level0" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Windows/app_Data/resources.assets" afterPath="$PROJECT_DIR$/Windows/app_Data/resources.assets" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Windows/app_Data/resources.assets.resS" afterPath="$PROJECT_DIR$/Windows/app_Data/resources.assets.resS" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Windows/app_Data/sharedassets0.assets" afterPath="$PROJECT_DIR$/Windows/app_Data/sharedassets0.assets" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.MySouvenir/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.MySouvenir/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Layers/ProductsLayer.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Layers/ProductsLayer.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Layers/TestLayer.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Layers/TestLayer.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/ProductManager.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/ProductManager.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Net/URLVariables.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Net/URLVariables.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Panels/DropDownPanel.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Panels/DropDownPanel.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Windows/app_Data/output_log.txt" afterPath="$PROJECT_DIR$/Windows/app_Data/output_log.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,36 +35,36 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TestLayer.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TestLayer.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Layers/TestLayer.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+            <state relative-caret-position="1080">
+              <caret line="72" column="9" lean-forward="true" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
               <folding>
-                <marker date="1489872771070" expanded="true" signature="6:115" ph="..." />
-                <marker date="1489872771070" expanded="true" signature="148:1956" ph="{...}" />
-                <marker date="1489872771070" expanded="true" signature="190:1954" ph="{...}" />
-                <marker date="1489872771070" expanded="true" signature="692:1204" ph="{...}" />
-                <marker date="1489872771070" expanded="true" signature="1237:1258" ph="{...}" />
-                <marker date="1489872771070" expanded="true" signature="1291:1312" ph="{...}" />
-                <marker date="1489872771070" expanded="true" signature="1344:1365" ph="{...}" />
-                <marker date="1489872771070" expanded="true" signature="1399:1948" ph="{...}" />
+                <marker date="1489874575802" expanded="true" signature="6:115" ph="..." />
+                <marker date="1489874575802" expanded="true" signature="148:2205" ph="{...}" />
+                <marker date="1489874575802" expanded="true" signature="190:2203" ph="{...}" />
+                <marker date="1489874575802" expanded="true" signature="696:1449" ph="{...}" />
+                <marker date="1489874575802" expanded="true" signature="1482:1503" ph="{...}" />
+                <marker date="1489874575802" expanded="true" signature="1536:1557" ph="{...}" />
+                <marker date="1489874575802" expanded="true" signature="1589:1610" ph="{...}" />
+                <marker date="1489874575802" expanded="true" signature="1644:2197" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DropDownPanel.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DropDownPanel.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Panels/DropDownPanel.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="43" column="32" lean-forward="false" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
+            <state relative-caret-position="300">
+              <caret line="20" column="42" lean-forward="false" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
               <folding>
-                <marker date="1489873049910" expanded="true" signature="6:40" ph="..." />
-                <marker date="1489873049910" expanded="true" signature="58:1834" ph="{...}" />
-                <marker date="1489873049910" expanded="true" signature="91:1832" ph="{...}" />
-                <marker date="1489873049910" expanded="true" signature="439:1826" ph="{...}" />
-                <marker date="1489873049910" expanded="true" signature="1117:1731" ph="{...}" />
+                <marker date="1489874063062" expanded="true" signature="6:40" ph="..." />
+                <marker date="1489874063062" expanded="true" signature="58:1889" ph="{...}" />
+                <marker date="1489874063062" expanded="true" signature="91:1887" ph="{...}" />
+                <marker date="1489874063062" expanded="true" signature="439:1881" ph="{...}" />
+                <marker date="1489874063062" expanded="true" signature="1172:1786" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -68,7 +73,7 @@
       <file leaf-file-name="ProductManager.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/ProductManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-46">
+            <state relative-caret-position="-91">
               <caret line="36" column="68" lean-forward="false" selection-start-line="36" selection-start-column="68" selection-end-line="36" selection-end-column="68" />
               <folding>
                 <marker date="1489872401443" expanded="true" signature="6:132" ph="..." />
@@ -192,8 +197,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Layers/ProductsLayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Net/URLVariables.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/ProductManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Layers/TestLayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Panels/DropDownPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Layers/TestLayer.cs" />
       </list>
     </option>
   </component>
@@ -433,12 +438,12 @@
       <workItem from="1488737805508" duration="5969000" />
       <workItem from="1489229342630" duration="6610000" />
       <workItem from="1489864547366" duration="5082000" />
-      <workItem from="1489871414781" duration="1954000" />
+      <workItem from="1489871414781" duration="3125000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105970000" />
+    <option name="totallyTimeSpent" value="107141000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -791,9 +796,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Net/URLVariables.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <marker date="1489872402165" expanded="true" signature="48:883" ph="{...}" />
+            <marker date="1489872402165" expanded="true" signature="109:881" ph="{...}" />
+            <marker date="1489872402165" expanded="true" signature="309:435" ph="{...}" />
+            <marker date="1489872402165" expanded="true" signature="364:425" ph="{...}" />
+            <marker date="1489872402165" expanded="true" signature="474:565" ph="{...}" />
+            <marker date="1489872402165" expanded="true" signature="598:875" ph="{...}" />
+            <marker date="1489872402165" expanded="true" signature="624:865" ph="{...}" />
+            <marker date="1489872402165" expanded="true" signature="725:820" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Panels/DropDownPanel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="42" lean-forward="false" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+          <folding>
+            <marker date="1489874063062" expanded="true" signature="6:40" ph="..." />
+            <marker date="1489874063062" expanded="true" signature="58:1889" ph="{...}" />
+            <marker date="1489874063062" expanded="true" signature="91:1887" ph="{...}" />
+            <marker date="1489874063062" expanded="true" signature="439:1881" ph="{...}" />
+            <marker date="1489874063062" expanded="true" signature="1172:1786" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Managers/ProductManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-46">
+        <state relative-caret-position="-91">
           <caret line="36" column="68" lean-forward="false" selection-start-line="36" selection-start-column="68" selection-end-line="36" selection-end-column="68" />
           <folding>
             <marker date="1489872401443" expanded="true" signature="6:132" ph="..." />
@@ -813,50 +849,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Net/URLVariables.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <marker date="1489872402165" expanded="true" signature="48:883" ph="{...}" />
-            <marker date="1489872402165" expanded="true" signature="109:881" ph="{...}" />
-            <marker date="1489872402165" expanded="true" signature="309:435" ph="{...}" />
-            <marker date="1489872402165" expanded="true" signature="364:425" ph="{...}" />
-            <marker date="1489872402165" expanded="true" signature="474:565" ph="{...}" />
-            <marker date="1489872402165" expanded="true" signature="598:875" ph="{...}" />
-            <marker date="1489872402165" expanded="true" signature="624:865" ph="{...}" />
-            <marker date="1489872402165" expanded="true" signature="725:820" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Layers/TestLayer.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+        <state relative-caret-position="1080">
+          <caret line="72" column="9" lean-forward="true" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
           <folding>
-            <marker date="1489872771070" expanded="true" signature="6:115" ph="..." />
-            <marker date="1489872771070" expanded="true" signature="148:1956" ph="{...}" />
-            <marker date="1489872771070" expanded="true" signature="190:1954" ph="{...}" />
-            <marker date="1489872771070" expanded="true" signature="692:1204" ph="{...}" />
-            <marker date="1489872771070" expanded="true" signature="1237:1258" ph="{...}" />
-            <marker date="1489872771070" expanded="true" signature="1291:1312" ph="{...}" />
-            <marker date="1489872771070" expanded="true" signature="1344:1365" ph="{...}" />
-            <marker date="1489872771070" expanded="true" signature="1399:1948" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Panels/DropDownPanel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="43" column="32" lean-forward="false" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
-          <folding>
-            <marker date="1489873049910" expanded="true" signature="6:40" ph="..." />
-            <marker date="1489873049910" expanded="true" signature="58:1834" ph="{...}" />
-            <marker date="1489873049910" expanded="true" signature="91:1832" ph="{...}" />
-            <marker date="1489873049910" expanded="true" signature="439:1826" ph="{...}" />
-            <marker date="1489873049910" expanded="true" signature="1117:1731" ph="{...}" />
+            <marker date="1489874575802" expanded="true" signature="6:115" ph="..." />
+            <marker date="1489874575802" expanded="true" signature="148:2205" ph="{...}" />
+            <marker date="1489874575802" expanded="true" signature="190:2203" ph="{...}" />
+            <marker date="1489874575802" expanded="true" signature="696:1449" ph="{...}" />
+            <marker date="1489874575802" expanded="true" signature="1482:1503" ph="{...}" />
+            <marker date="1489874575802" expanded="true" signature="1536:1557" ph="{...}" />
+            <marker date="1489874575802" expanded="true" signature="1589:1610" ph="{...}" />
+            <marker date="1489874575802" expanded="true" signature="1644:2197" ph="{...}" />
           </folding>
         </state>
       </provider>

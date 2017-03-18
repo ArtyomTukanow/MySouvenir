@@ -19,6 +19,7 @@ namespace Panels
             _panel = Loader.Instantiate(Resources.Load<GameObject>("GameObjects/panels/dropDownPanel"));
             _panel.transform.parent = parent;
             _panel.transform.localPosition = position;
+            _panel.transform.localScale = Vector3.one;
 
             _dropDown = _panel.transform.FindChild("DropDown").transform;
             _buttonDrop = _panel.transform.FindChild("ButtonDrop").GetComponent<Button>();
