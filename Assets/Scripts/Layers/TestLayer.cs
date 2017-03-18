@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Layers.Enum;
+using Panels;
 using UnityEngine;
 
 namespace Assets.Scripts.Layers
@@ -16,7 +17,7 @@ namespace Assets.Scripts.Layers
 
         private TestLayer()
         {
-
+            DropDownPanel panel = new DropDownPanel(_canvas.transform, new Vector2(100, 100), "text 1", "text 2", "text 3");
         }
 
         public void OnVisable()
