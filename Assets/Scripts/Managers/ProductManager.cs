@@ -26,13 +26,18 @@ namespace Managers
             tagsString = tagsString.Replace(",", "");
             Log.d(tagsString);
             string[] tags = tagsString.Split(' ');
-            ProductsLoad(callback, tags);
+            ProductsLoad(callback, new URLVariables(tags));
         }
 
         public void ProductsLoad(Action<Products> callback, params string[] tags)
         {
+            ProductsLoad(callback, new URLVariables(tags));
+        }
+
+        public void ProductsLoad(Action<Products> callback, URLVariables tags)
+        {
             _currentCallback = callback;
-            NetManager.LoadText(NetManager.MainUrl + "get-products.php", new URLVariables(tags), OnLoadProductsText);
+            NetManager.LoadText(NetManager.MainUrl + "get-products.php", tags, OnLoadProductsText);
         }
 
         private void OnLoadProductsText(string jsonData)

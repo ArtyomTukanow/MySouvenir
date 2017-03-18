@@ -1,6 +1,9 @@
 ﻿using Assets.Scripts.Layers.Enum;
+using Managers;
+using Net;
 using Panels;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Assets.Scripts.Layers
 {
@@ -15,9 +18,22 @@ namespace Assets.Scripts.Layers
 
         public static TestLayer instance = new TestLayer();
 
+
+        private DropDownPanel _tag1;
+        private Button _confirmButton;
+        private Text _minPriceInput;
+        private Text _maxPriceInput;
+
+
+
+
         private TestLayer()
         {
-            DropDownPanel panel = new DropDownPanel(_canvas.transform, new Vector2(0, 0), "text 1", "text 2", "text 3");
+            _confirmButton = _canvas.transform.FindChild("ConfirmButton").GetComponent<Button>();
+            _confirmButton.onClick.AddListener(FindItems);
+            _tag1 = new DropDownPanel(_canvas.transform, new Vector2(0, 0), "Романтика", "Дом", "Работа");
+            _minPriceInput = _canvas.transform.FindChild("minPriceInput").FindChild("text").GetComponent<Text>();
+            _maxPriceInput = _canvas.transform.FindChild("maxPriceInput").FindChild("text").GetComponent<Text>();
         }
 
         public void OnVisable()
@@ -33,6 +49,18 @@ namespace Assets.Scripts.Layers
         public void OnReload()
         {
 
+        }
+
+        private void FindItems()
+        {
+            ApplicationManager.UiManager.Layer = LayerNamesEnum.items;
+            URLVariables urlVariables = new URLVariables();
+            if(_minPriceInput.text != "")
+                urlVariables.Add(URLVariables.MIN_PRICE, _minPriceInput.text);
+            if(_maxPriceInput.text != "")
+                urlVariables.Add(URLVariables.MAX_PRICE, _maxPriceInput.text);
+            urlVariables.Add(_tag1.value);
+            ApplicationManager.ProductManager.ProductsLoad(ProductsLayer.instance.OnProductsLoad, urlVariables);
         }
     }
 }

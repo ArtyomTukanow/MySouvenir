@@ -44,7 +44,7 @@ namespace Assets.Scripts.Layers
             itemsSearchPanel.ReloadPanel();
         }
 
-        private void OnProductsLoad(Products products)
+        public void OnProductsLoad(Products products)
         {
             itemsScrollPanel.Items = products.products;
             OnReload();

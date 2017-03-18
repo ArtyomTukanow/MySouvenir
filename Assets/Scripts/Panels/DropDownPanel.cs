@@ -1,7 +1,5 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using Utils;
 
 namespace Panels
 {
@@ -42,6 +40,8 @@ namespace Panels
                     value = dropElement.GetComponentInChildren<Text>().text;
                 });
             }
+
+            value = elements[0];
             _dropDown.gameObject.SetActive(false);
         }
     }

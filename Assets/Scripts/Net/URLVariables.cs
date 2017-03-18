@@ -9,11 +9,11 @@ namespace Net
 
         private int _counter = 0;
 
-        public URLVariables(params string[] tags)
+        public URLVariables(params string[] values)
         {
-            foreach (string tag in tags)
+            foreach (string value in values)
             {
-                this.Add(tag);
+                this.Add(value);
             }
         }
 
