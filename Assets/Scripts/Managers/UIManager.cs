@@ -21,6 +21,7 @@ namespace Managers
             ProductLayer.instance,
             ProductsLayer.instance,
             NewsLayer.instance,
+            ShopsLayer.instance,
             ShopLayer.instance,
             TestLayer.instance
         });

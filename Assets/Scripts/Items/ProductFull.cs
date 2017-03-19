@@ -10,6 +10,10 @@ namespace Items
     [Serializable]
     public class ProductFull : ItemBase, IItemBase
     {
+        //////////
+        // MODEL
+        ////////
+
         public int product_id;
         public string product_name;
         public string product_description;
@@ -21,6 +25,11 @@ namespace Items
         public string shop_img;
         public string shop_adress;
         public string shop_url;
+
+
+        //////////
+        // VIEW
+        ////////
 
         public Text ProductName;
         public Text ProductDescription;
@@ -104,11 +113,6 @@ namespace Items
         {
             base.OnLoadImage(texture2D);
             ShopImage.sprite = Sprite.Create(texture2D, new Rect(0,0,texture2D.width,texture2D.height), new Vector2(0.5f,0.5f));
-        }
-
-        protected override void OnClick()
-        {
-            base.OnClick();
         }
     }
 }

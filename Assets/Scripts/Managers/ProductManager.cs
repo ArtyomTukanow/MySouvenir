@@ -1,6 +1,5 @@
 ﻿using System;
 using Assets.Scripts.Layers;
-using Assets.Scripts.Layers.Enum;
 using Net;
 using Items;
 using UnityEngine;

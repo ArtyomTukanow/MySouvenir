@@ -11,12 +11,21 @@ namespace Items
     [Serializable]
     public class Product : ItemBase, IItemBase
     {
+        //////////
+        // MODEL
+        ////////
+
         public int product_id;
         public string product_name;
         public string product_description;
         public string product_img;
         public string product_url;
         public string price;
+
+
+        /////////
+        // VIEW
+        ///////
 
         public Text ProductNameGameObject;
         //public Text ProductDescription;
