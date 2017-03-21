@@ -1,4 +1,5 @@
-﻿using Items.Interface;
+﻿using System;
+using Items.Interface;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -55,7 +56,8 @@ namespace Panels
         {
             set
             {
-                _firstDefaultText = value.text;
+                if(String.IsNullOrEmpty(_firstDefaultText))
+                    _firstDefaultText = value.text;
                 _defaultText = value;
             }
             get { return _defaultText; }
@@ -87,10 +89,20 @@ namespace Panels
 
         public override void LoadItems()
         {
-            if(Items == null || Items.Length == 0)
+            if (Items == null || Items.Length == 0)
+            {
+                if (DefaultText != null)
+                {
+                    _defaultText.text = "Поиск не дал результатов...";
+                }
                 return;
+            }
 
             DestroyOldItems();
+            if (DefaultText != null)
+            {
+                _defaultText.text = "";
+            }
             _page = _pagesCount > _page ? _page : _pagesCount - 1;
             if (_page < 0) _page = 0;
 
@@ -112,10 +124,15 @@ namespace Panels
                         new Vector2(0, -sizeContainer.y / 2 - (i - startProductId) * sizeContainer.y);
                 }
             }
-            else if (DefaultText != null)
+        }
+
+        public override void DestroyOldItems()
+        {
+            if (DefaultText != null)
             {
-                DefaultText.text = "Поиск не дал результатов...";
+                _defaultText.text = _firstDefaultText;
             }
+            base.DestroyOldItems();
         }
 
         public override void ReloadPanel()

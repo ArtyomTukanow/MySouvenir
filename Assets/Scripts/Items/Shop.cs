@@ -40,7 +40,7 @@ namespace Items
             ShopDescriptionGameObject = ContainerGameObject.transform.FindChild("shop_description").GetComponent<Text>();
             if (!String.IsNullOrEmpty(shop_description))
             {
-                ShopDescriptionGameObject.text = shop_description;
+                ShopDescriptionGameObject.text = shop_description.Replace("<br />", "\n");
             }
 
             ImageLoadConnection = NetManager.LoadImage(shop_img, null, OnLoadImage);

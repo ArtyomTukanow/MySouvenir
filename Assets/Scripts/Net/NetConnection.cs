@@ -40,6 +40,7 @@ namespace Net
                 }
             }
             NetManager.Connections.Remove(this);
+            LoadingUtil.Hide();
         }
 
         private IEnumerator CoroutineLoadImage(string url, Action<Texture2D> onComplete = null, Action<object> onError = null)
@@ -64,11 +65,13 @@ namespace Net
                 }
             }
             NetManager.Connections.Remove(this);
+            LoadingUtil.Hide();
         }
 
         public void Cancel()
         {
             NetManager.Connections.Remove(this);
+            LoadingUtil.Hide();
         }
     }
 }

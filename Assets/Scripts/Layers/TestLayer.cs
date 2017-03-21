@@ -40,7 +40,8 @@ namespace Assets.Scripts.Layers
                 "Дом",
                 "Романтика",
                 "Ребенок",
-                "Маленький");
+                "Маленький",
+                "Именное");
             _minPriceInput = _canvas.transform.FindChild("minPriceInput").FindChild("text").GetComponent<Text>();
             _maxPriceInput = _canvas.transform.FindChild("maxPriceInput").FindChild("text").GetComponent<Text>();
         }

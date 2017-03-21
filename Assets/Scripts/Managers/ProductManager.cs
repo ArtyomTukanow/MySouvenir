@@ -37,15 +37,13 @@ namespace Managers
         {
             _currentCallback = callback;
             NetManager.LoadText(NetManager.MainUrl + "get-products.php", tags, OnLoadProductsText);
+            LoadingUtil.Show();
         }
 
         private void OnLoadProductsText(string jsonData)
         {
-            if (!String.IsNullOrEmpty(jsonData))
-            {
-                productsList = JsonUtility.FromJson<Products>(jsonData);
-                _currentCallback(productsList);
-            }
+            productsList = JsonUtility.FromJson<Products>(jsonData);
+            _currentCallback(productsList);
         }
 
 
@@ -57,19 +55,14 @@ namespace Managers
             URLVariables variables = new URLVariables();
             variables.Add("id", id.ToString());
             NetManager.LoadText(NetManager.MainUrl + "get-product-by-id.php", variables, OnLoadProductText);
+            LoadingUtil.Show();
         }
 
         private void OnLoadProductText(string jsonData)
         {
-            if (!String.IsNullOrEmpty(jsonData))
-            {
-                product = JsonUtility.FromJson<ProductFull>(jsonData);
-                if (product.product_id >= 0)
-                {
-                    ProductLayer.instance.itemScrollPanel.Items = new []{product};
-                    ProductLayer.instance.OnReload();
-                }
-            }
+            product = JsonUtility.FromJson<ProductFull>(jsonData);
+            ProductLayer.instance.itemScrollPanel.Items = new []{product};
+            ProductLayer.instance.OnReload();
         }
     }
 }

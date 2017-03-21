@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Event\EventDispatcher.cs" />
      <Compile Include="Assets\Scripts\Items\Interface\IItemBase.cs" />
      <Compile Include="Assets\Scripts\Items\ItemBase.cs" />
      <Compile Include="Assets\Scripts\Items\Product.cs" />
@@ -79,7 +80,9 @@
      <Compile Include="Assets\Scripts\Panels\PanelBase.cs" />
      <Compile Include="Assets\Scripts\Panels\ScrollPanelBase.cs" />
      <Compile Include="Assets\Scripts\Panels\SearchPanel.cs" />
+     <Compile Include="Assets\Scripts\Utils\LoadingUtil.cs" />
      <Compile Include="Assets\Scripts\Utils\Log.cs" />
+     <Compile Include="Assets\Scripts\Utils\SITween.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

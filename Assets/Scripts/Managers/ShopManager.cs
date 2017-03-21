@@ -2,6 +2,7 @@
 using Items;
 using Net;
 using UnityEngine;
+using Utils;
 
 namespace Managers
 {
@@ -18,14 +19,12 @@ namespace Managers
         {
             _currentCallback = callback;
             NetManager.LoadText(NetManager.MainUrl + "get-shops.php", null, onLoadShopsText);
+            LoadingUtil.Show();
         }
 
         private void onLoadShopsText(string jsonData)
         {
-            if (!String.IsNullOrEmpty(jsonData))
-            {
-                _currentCallback(JsonUtility.FromJson<Shops>(jsonData));
-            }
+            _currentCallback(JsonUtility.FromJson<Shops>(jsonData));
         }
 
 
@@ -37,14 +36,12 @@ namespace Managers
             URLVariables variables = new URLVariables();
             variables.Add("id", id);
             NetManager.LoadText(NetManager.MainUrl + "get-shop-by-id.php", variables, onLoadShopText);
+            LoadingUtil.Show();
         }
 
         private void onLoadShopText(string jsonData)
         {
-            if (!String.IsNullOrEmpty(jsonData))
-            {
-                _currentShopFullCallback(JsonUtility.FromJson<ShopFull>(jsonData));
-            }
+            _currentShopFullCallback(JsonUtility.FromJson<ShopFull>(jsonData));
         }
     }
 }

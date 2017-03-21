@@ -20,7 +20,7 @@ namespace Panels
             get { return _items; }
         }
 
-        public void DestroyOldItems()
+        public virtual void DestroyOldItems()
         {
             if(Items == null || Items.Length == 0)
                 return;

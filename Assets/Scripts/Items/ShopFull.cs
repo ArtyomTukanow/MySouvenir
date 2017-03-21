@@ -38,9 +38,9 @@ namespace Items
             ShopName.text = shop_name;
             ShopImage = ContainerGameObject.transform.FindChild("shop_image").GetComponent<Image>();
             ShopDescription = ContainerGameObject.transform.FindChild("shop_description").GetComponent<Text>();
-            ShopDescription.text = shop_description;
+            ShopDescription.text = shop_description.Replace("<br />", "\n");;
             ShopAdress = ContainerGameObject.transform.FindChild("shop_adress").GetComponent<Text>();
-            ShopAdress.text = shop_adress;
+            ShopAdress.text = shop_adress.Replace("<br />", "\n");;
             goBackButton = ContainerGameObject.transform.FindChild("goBackButton").GetComponent<Button>();
             goBackButton.onClick.AddListener(UIManager.instance.GoBackToLastLayer);
             MapImage = ContainerGameObject.transform.FindChild("map_image").GetComponent<Image>();

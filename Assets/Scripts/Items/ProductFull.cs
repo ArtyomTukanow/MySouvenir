@@ -1,4 +1,6 @@
 ﻿using System;
+using Assets.Scripts.Layers;
+using Assets.Scripts.Layers.Enum;
 using Items.Interface;
 using Managers;
 using Net;
@@ -77,11 +79,13 @@ namespace Items
             });
             ShopImageButton.onClick.AddListener(delegate
             {
-                Application.OpenURL(shop_url);
+                ApplicationManager.UiManager.Layer = LayerNamesEnum.shop;
+                ApplicationManager.ShopManager.ShopLoad(ShopLayer.instance.OnShopLoad, shop_id);
             });
             ShopInfoButton.onClick.AddListener(delegate
             {
-                //fixme HERE MUST ME OPEN SHOP PAGE
+                ApplicationManager.UiManager.Layer = LayerNamesEnum.shop;
+                ApplicationManager.ShopManager.ShopLoad(ShopLayer.instance.OnShopLoad, shop_id);
             });
             ShopUrlButton.onClick.AddListener(delegate
             {
@@ -95,7 +99,7 @@ namespace Items
             ProductName.text = product_name;
             PriceGameObject.text = price + "руб";
             if (!String.IsNullOrEmpty(product_description.Trim()))
-                ProductDescription.text = product_description;
+                ProductDescription.text = product_description.Replace("<br />", "\n");
             if (!String.IsNullOrEmpty(shop_adress.Trim()))
                 ShopAdress.text = shop_adress;
             ShopInfoButton.GetComponentInChildren<Text>().text = "Подробнее о \"" + shop_name + "\"";

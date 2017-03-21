@@ -23,12 +23,10 @@ namespace Assets.Scripts.Layers
 
         public void OnVisable()
         {
-
         }
 
         public void OnDisable()
         {
-            itemScrollPanel.DestroyOldItems();
         }
 
         public void OnReload()
