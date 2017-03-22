@@ -12,22 +12,6 @@ public class Loader : MonoBehaviour
 
 	void Update ()
 	{
-	    if (Input.GetKey(KeyCode.Escape))
-	    {
-	        if (ApplicationManager.UiManager.MenuIsOpened)
-	        {
-	            ApplicationManager.UiManager.closeMenu();
-	        }
-	        else if (ApplicationManager.UiManager.LastLayers.Count > 0)
-	        {
-	            ApplicationManager.UiManager.GoBackToLastLayer();
-	        }
-	        else
-	        {
-	            Application.Quit();
-	        }
-	    }
-
 	    LoadingUtil.Update();
 	    EventDispatcher.Update();
 	    SITween.UpdateTweens();
@@ -39,10 +23,28 @@ public class Loader : MonoBehaviour
         ApplicationManager.Start();
         NetManager.LoadText(NetManager.MainUrl + "try-parse.php", null, completeTryParse);
         LoadingUtil.Start();
+
+        EventDispatcher.AddOnReleaseEsc(onRealeaseEsc);
     }
 
     private void completeTryParse(string message)
     {
         Log.d(message);
+    }
+
+    private void onRealeaseEsc()
+    {
+        if (ApplicationManager.UiManager.MenuIsOpened)
+        {
+            ApplicationManager.UiManager.closeMenu();
+        }
+        else if (ApplicationManager.UiManager.LastLayers.Count > 0)
+        {
+            ApplicationManager.UiManager.GoBackToLastLayer();
+        }
+        else
+        {
+            Application.Quit();
+        }
     }
 }

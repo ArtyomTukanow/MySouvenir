@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using Utils;
 
 namespace Assets.Scripts.Event
 {
@@ -9,6 +10,7 @@ namespace Assets.Scripts.Event
         public static event Action<float,float> onTouch;
         public static event Action onTouchUp;
         public static event Action<float,float> onTouchDown;
+        public static event Action onReleaseEsc;
 
         public static void addOnTouch(Action<float, float> call)
         {
@@ -40,6 +42,12 @@ namespace Assets.Scripts.Event
             onTouchDown -= call;
         }
 
+        public static void AddOnReleaseEsc(Action call)
+        {
+            onReleaseEsc += call;
+        }
+
+        private static bool _isEsc;
         private static bool _isTouched;
         public static void Update()
         {
@@ -57,6 +65,16 @@ namespace Assets.Scripts.Event
             {
                 _isTouched = false;
                 onTouchUp();
+            }
+
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                _isEsc = true;
+            }
+            else if (_isEsc)
+            {
+                _isEsc = false;
+                onReleaseEsc();
             }
         }
     }

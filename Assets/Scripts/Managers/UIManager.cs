@@ -75,7 +75,7 @@ namespace Managers
                         layer.OnDisable();
                     }
                 }
-                if(_lastLayers.Count == 0 || _layer != _lastLayers[_lastLayers.Count-1])
+                if(_lastLayers.Count == 0 || value != _lastLayers[_lastLayers.Count-1])
                     _lastLayers.Add(_layer);
                 _layer = value;
                 foreach (ILayerBase layer in Layers) //enable new layers
