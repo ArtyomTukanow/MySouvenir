@@ -24,7 +24,7 @@ namespace Managers
             HowItsWorkLayer.instance,
             ProductLayer.instance,
             ProductsLayer.instance,
-            NewsLayer.instance,
+//            NewsLayer.instance,
             ShopsLayer.instance,
             ShopLayer.instance,
             TestLayer.instance
@@ -38,7 +38,7 @@ namespace Managers
         private GameObject menuWindow = GameObject.Find("menuWindow");
 
         //Buttons
-        private Button newsButton = GameObject.Find("newsButton").GetComponent<Button>();
+//        private Button newsButton = GameObject.Find("newsButton").GetComponent<Button>();
         private Button testButton = GameObject.Find("testButton").GetComponent<Button>();
         private Button chooseGiftButton = GameObject.Find("chooseGiftButton").GetComponent<Button>();
         private Button shopsButton = GameObject.Find("shopsButton").GetComponent<Button>();
@@ -106,13 +106,13 @@ namespace Managers
 
         public void Start()
         {
-            newsButton.onClick.AddListener(delegate
-            {
-                if (_hasTouchedMenu) return;
-
-                Layer = LayerNamesEnum.news;
-                _lastLayers = new List<LayerNamesEnum>();
-            });
+//            newsButton.onClick.AddListener(delegate
+//            {
+//                if (_hasTouchedMenu) return;
+//
+//                Layer = LayerNamesEnum.news;
+//                _lastLayers = new List<LayerNamesEnum>();
+//            });
             testButton.onClick.AddListener(delegate
             {
                 if (_hasTouchedMenu) return;

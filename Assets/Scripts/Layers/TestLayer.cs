@@ -20,28 +20,62 @@ namespace Assets.Scripts.Layers
 
 
         private DropDownPanel _tagPanel;
-        private Button _confirmButton;
+        private DropDownPanel _sexPanel;
+        private DropDownPanel _agePanel;
+        private DropDownPanel _hollydaysPanel;
+        private DropDownPanel _othersPanel;
         private Text _minPriceInput;
         private Text _maxPriceInput;
 
 
+        private Button _confirmButton;
 
 
         private TestLayer()
         {
             _confirmButton = _canvas.transform.FindChild("ConfirmButton").GetComponent<Button>();
             _confirmButton.onClick.AddListener(FindItems);
+            _othersPanel = new DropDownPanel(_canvas.transform.FindChild("PanelGameObject"), new Vector2(0, -200),
+                "Любой",
+                "Романтичный",
+                "С юмором",
+                "Серьезный",
+                "Для дома");
+            _hollydaysPanel = new DropDownPanel(_canvas.transform.FindChild("PanelGameObject"), new Vector2(0, -100),
+                "Любой",
+                "Новый год",
+                "Рождество",
+                "День рождения",
+                "День влюбленных",
+                "День защитника Отечества",
+                "Международный женский день",
+                "Юбилей",
+                "Годовщина свадьбы",
+                "День матери",
+                "День учителя",
+                "Хэллоуин");
             _tagPanel = new DropDownPanel(_canvas.transform.FindChild("PanelGameObject"), new Vector2(0, 0),
-                "Парень",
-                "Девушка",
+                "Любой",
                 "Мама",
+                "Папа",
                 "Сестра",
+                "Брат",
                 "Коллега",
-                "Дом",
-                "Романтика",
                 "Ребенок",
-                "Маленький",
                 "Именное");
+            _agePanel = new DropDownPanel(_canvas.transform.FindChild("PanelGameObject"), new Vector2(0, 100),
+                "Любой",
+                "до 5",
+                "от 5 до 10",
+                "от 11 до 16",
+                "от 17 до 25",
+                "от 26 до 35",
+                "от 36 до 45",
+                "от 45");
+            _sexPanel = new DropDownPanel(_canvas.transform.FindChild("PanelGameObject"), new Vector2(0, 200),
+                "Любой",
+                "Парень",
+                "Девушка");
             _minPriceInput = _canvas.transform.FindChild("minPriceInput").FindChild("text").GetComponent<Text>();
             _maxPriceInput = _canvas.transform.FindChild("maxPriceInput").FindChild("text").GetComponent<Text>();
         }
@@ -70,6 +104,10 @@ namespace Assets.Scripts.Layers
             if(_maxPriceInput.text != "")
                 urlVariables.Add(URLVariables.MAX_PRICE, _maxPriceInput.text);
             urlVariables.Add(_tagPanel.value);
+            urlVariables.Add(_sexPanel.value);
+            urlVariables.Add(_agePanel.value);
+            urlVariables.Add(_hollydaysPanel.value);
+            urlVariables.Add(_othersPanel.value);
             ApplicationManager.ProductManager.ProductsLoad(ProductsLayer.instance.OnProductsLoad, urlVariables);
         }
     }
